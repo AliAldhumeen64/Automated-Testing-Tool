@@ -84,7 +84,7 @@
                             <TextBlock Text="Create" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60">
+                    <ListViewItem x:Name="ItemImport" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Import" Height="25" Width="25" Margin="10"/>
                             <TextBlock Text="Import" VerticalAlignment="Center"  Margin="20 10"/>

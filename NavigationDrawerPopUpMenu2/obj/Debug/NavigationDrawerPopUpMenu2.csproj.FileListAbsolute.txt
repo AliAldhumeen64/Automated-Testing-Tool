@@ -115,3 +115,39 @@ X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPop
 \\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CopyComplete
 \\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.exe
 \\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe.config
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.pdb
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignColors.dll
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.dll
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.pdb
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.xml
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csprojResolveAssemblyReference.cache
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.g.cs
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.g.cs
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.g.cs
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\App.g.cs
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.cache
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.lref
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\App.baml
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.baml
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.baml
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.baml
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.g.resources
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.Properties.Resources.resources
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.GenerateResource.cache
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CoreCompileInputs.cache
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CopyComplete
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.exe
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.g.cs
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.baml
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\Xceed.Words.NET.dll
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\NavigationDrawerPopUpMenu2.exe.config
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\NavigationDrawerPopUpMenu2.exe
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\NavigationDrawerPopUpMenu2.pdb
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\MaterialDesignColors.dll
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\MaterialDesignThemes.Wpf.dll
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\Xceed.Words.NET.dll
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\MaterialDesignThemes.Wpf.pdb
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\MaterialDesignThemes.Wpf.xml

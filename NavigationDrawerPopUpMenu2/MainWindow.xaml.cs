@@ -58,6 +58,10 @@ namespace NavigationDrawerPopUpMenu2
                     usc = new UserControlCreate();
                     GridMain.Children.Add(usc);
                     break;
+                case "ItemImport":
+                    usc = new UserControlImport();
+                    GridMain.Children.Add(usc);
+                    break;
                 default:
                     break;
             }
