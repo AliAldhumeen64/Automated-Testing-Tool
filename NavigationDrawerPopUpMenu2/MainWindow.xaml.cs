@@ -15,9 +15,7 @@ using System.Windows.Shapes;
 
 namespace NavigationDrawerPopUpMenu2
 {
-    /// <summary>
 
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()

@@ -5,8 +5,16 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:NavigationDrawerPopUpMenu2"
              mc:Ignorable="d" 
+             Height="500" Width="500"
              >
-    <Grid Background="Red">
-            
+    <Grid Margin="10">
+        <ListView Name="lvUsers">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Command" Width="120" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Description" Width="120" DisplayMemberBinding="{Binding Description}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>

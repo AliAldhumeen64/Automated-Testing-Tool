@@ -18,9 +18,7 @@ using Xceed.Words.NET;
 
 namespace NavigationDrawerPopUpMenu2
 {
-    /// <summary>
-    /// Interação lógica para UserControlImport.xam
-    /// </summary>
+ 
     public partial class UserControlImport : UserControl
     {
         public UserControlImport()

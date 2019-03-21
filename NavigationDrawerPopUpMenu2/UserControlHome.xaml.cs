@@ -15,9 +15,7 @@ using System.Windows.Shapes;
 
 namespace NavigationDrawerPopUpMenu2
 {
-    /// <summary>
-    /// Interação lógica para UserControlHome.xam
-    /// </summary>
+ 
     public partial class UserControlHome : UserControl
     {
         public UserControlHome()
