@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
 using Xceed.Words.NET;
+using Microsoft.Win32;
 
 namespace NavigationDrawerPopUpMenu2
 {
@@ -23,8 +24,19 @@ namespace NavigationDrawerPopUpMenu2
     {
         public UserControlImport()
         {
-            parse();
+            //parse();
+           
             InitializeComponent();
+            OpenFileClicked();
+        }
+
+        public void OpenFileClicked()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if(openFileDialog.ShowDialog() == true)
+            {
+                Console.WriteLine("File was chosen");
+            }
         }
 
         public static void parse()

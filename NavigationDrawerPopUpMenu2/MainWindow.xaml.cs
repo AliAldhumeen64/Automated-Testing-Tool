@@ -22,7 +22,14 @@ namespace NavigationDrawerPopUpMenu2
         {
             InitializeComponent();
         }
-        
+
+
+        //Let the user drag the window
+        private void MovesOnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
         {
             ButtonCloseMenu.Visibility = Visibility.Visible;
@@ -54,6 +61,7 @@ namespace NavigationDrawerPopUpMenu2
                     break;
                 case "ItemCreate":
                     usc = new UserControlCreate();
+                    
                     GridMain.Children.Add(usc);
                     break;
                 case "ItemImport":
