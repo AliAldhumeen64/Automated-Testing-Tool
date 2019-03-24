@@ -8,13 +8,14 @@ using Xceed.Words.NET;
 
 namespace NavigationDrawerPopUpMenu2
 {
-    class Offset
+    public class Offset
     {
         private string offsetValue;
         private string mask;
         private string type;
         private string units;
         private string description;
+        private int parameterCount;
 
         public Offset()
         {
@@ -23,6 +24,7 @@ namespace NavigationDrawerPopUpMenu2
             type = "";
             units = "";
             description = "";
+            parameterCount = -1;
         }
 
         public Offset(string newOffsetValue, string newMask, string newType, string newUnits, string newDescription)
@@ -32,6 +34,7 @@ namespace NavigationDrawerPopUpMenu2
             type = newType;
             units = newUnits;
             description = newDescription;
+            parameterCount = -1;
         }
 
         public string getOffsetValue()
@@ -50,6 +53,8 @@ namespace NavigationDrawerPopUpMenu2
         public void setMask(string newMask)
         {
             mask = newMask;
+            //because the mask is changed, we have to find the parameter count again
+            parameterCount = -1;
         }
         public string getType()
         {
@@ -76,5 +81,50 @@ namespace NavigationDrawerPopUpMenu2
             description = newDescription;
         }
 
+
+        //
+        //This function returns the number of parameters for an offset
+        //pretty much needed
+        //the parameters are always Letters where the first one is 'A', then 'B', then 'C', etc.
+        //Use the int value this function to returns to know how many letters to worry about
+        //
+        public int getParameterCount()
+        {
+            //parameterCount is -1 if it hasnt been found before
+            if (parameterCount == -1)
+            {
+                List<char> seenLetters = new List<char>();
+                char currentLetter;
+                bool isNewLetter;
+
+                //look through whole mask for parameters
+                for (int i = 0; i < mask.Length; i++)
+                {
+                    currentLetter = mask.ElementAt(i);
+                    //ignore Xs in the mask
+                    if (currentLetter != 'X')
+                    {
+                        isNewLetter = true;
+                        //search through seenLetters if the currentLetter being looked at has shown up before, it isnt a new parameter and the count shouldnt be incremented
+                        for (int j = 0; j < seenLetters.Count; j++)
+                        {
+                            if (seenLetters.ElementAt(j) == currentLetter)
+                                isNewLetter = false;
+                        }
+
+                        //if it is a new letter, add it to the list and increase the parameter count
+                        if (isNewLetter)
+                        {
+                            seenLetters.Add(currentLetter);
+                            parameterCount++;
+                        }
+                    }
+                }
+            }
+
+            return parameterCount;
+        }
+            
     }
 }
+

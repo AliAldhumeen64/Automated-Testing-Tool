@@ -18,16 +18,41 @@ namespace NavigationDrawerPopUpMenu2
     
     public partial class UserControlCreate : UserControl
     {
+        private bool hasDisplayedCommands = false;
+
         public UserControlCreate()
         {
             InitializeComponent();
 
-            List<Commands> items = new List<Commands>();
-            items.Add(new Commands() { Name = "Command One", Description = "Something" });
-            items.Add(new Commands() { Name = "Command Two", Description = "Something" });
-            items.Add(new Commands() { Name = "Command Three", Description = "Something" });
-            items.Add(new Commands() { Name = "Command Four", Description = "Something" });
-            lvUsers.ItemsSource = items;
+
+            //
+            //NEXT STEPS HERE
+            //
+            //We need to display the offset values for each command, with their descriptions
+            //we need to let the user put commands into the queue of commands, and enter the offset values for the command, maybe only show the offsets and their descriptions when the user wants to enter them?
+            //once the user is happy with what they put into the queue, the home tab needs to access the queue with the parameter values entered so that they can be sent to the BSC
+
+            // AND REMEMBER
+            // WE CAN DO IT
+
+
+            if (NavigationDrawerPopUpMenu2.UserControlImport.hasReadFile && !hasDisplayedCommands)
+            {
+                //this literally grabs the list of commands from the import page
+                List<Command> readCommandList = NavigationDrawerPopUpMenu2.UserControlImport.commandList;
+
+                List<Commands> items = new List<Commands>();
+
+                for (int i = 0; i < readCommandList.Count; i++)
+                {
+                    //if a command doesnt have a reply type, it isnt a command
+                    if (!(readCommandList.ElementAt(i).getReplyName().Equals("None")))
+                        items.Add(new Commands() { Name = readCommandList.ElementAt(i).getPayloadName(), Description = readCommandList.ElementAt(i).getDescription() });
+                    
+                }
+                lvUsers.ItemsSource = items;
+                hasDisplayedCommands = true;
+            }
 
             CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(lvUsers.ItemsSource);
         }

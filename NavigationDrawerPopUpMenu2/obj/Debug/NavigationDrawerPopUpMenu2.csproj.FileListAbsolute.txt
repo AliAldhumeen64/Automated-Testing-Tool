@@ -178,3 +178,31 @@ P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\D
 P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CopyComplete
 P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.exe
 P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe.config
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.pdb
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignColors.dll
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\Xceed.Words.NET.dll
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csprojAssemblyReference.cache
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.g.cs
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.g.cs
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.g.cs
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.g.cs
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\App.g.cs
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.cache
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.lref
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\App.baml
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.baml
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.baml
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.baml
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.baml
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.g.resources
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.Properties.Resources.resources
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.GenerateResource.cache
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CoreCompileInputs.cache
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CopyComplete
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.exe
+C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
