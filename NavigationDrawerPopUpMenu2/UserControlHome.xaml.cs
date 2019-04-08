@@ -24,13 +24,21 @@ namespace NavigationDrawerPopUpMenu2
         private static UdpClient udp;
         bool runCommandList = false;
 
+
+        private readonly SharedLayoutCoordinator example;
+
         public UserControlHome()
         {
             InitializeComponent();
             if (runCommandList)
             {
                 LaunchCommandLineApp();
+
             }
+
+            //This is to fill the 3 list
+            this.example = (SharedLayoutCoordinator)((Grid)this.Content).FindResource("slc");
+            example.ItemsSource = typeof(Brushes).GetProperties().Select(p => p.Name).OrderBy(a => a).ToArray();
         }
 
         static void LaunchCommandLineApp()

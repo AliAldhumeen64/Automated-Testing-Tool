@@ -206,3 +206,5 @@ C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Test
 C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CopyComplete
 C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.exe
 C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
+P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csprojResolveAssemblyReference.cache

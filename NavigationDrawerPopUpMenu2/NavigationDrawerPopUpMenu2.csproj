@@ -79,8 +79,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BattleShortCmd.cs" />
+    <Compile Include="SharedLayoutCoordinator.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="Offset.cs" />
+    <Compile Include="SharedLayoutStackPanel.cs" />
     <Compile Include="UserControlImport.xaml.cs">
       <DependentUpon>UserControlImport.xaml</DependentUpon>
     </Compile>
