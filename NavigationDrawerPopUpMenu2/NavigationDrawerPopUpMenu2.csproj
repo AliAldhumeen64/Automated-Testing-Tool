@@ -79,6 +79,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BattleShortCmd.cs" />
+    <Compile Include="Header.cs" />
     <Compile Include="SharedLayoutCoordinator.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="Offset.cs" />
