@@ -16,6 +16,7 @@ namespace NavigationDrawerPopUpMenu2
         private string units;
         private string description;
         private int parameterCount;
+        private string message;
 
         public Offset()
         {
@@ -41,6 +42,7 @@ namespace NavigationDrawerPopUpMenu2
         {
             return offsetValue;
         }
+
         public void setOffsetValue(string newOffsetValue)
         {
             offsetValue = newOffsetValue;
@@ -81,6 +83,15 @@ namespace NavigationDrawerPopUpMenu2
             description = newDescription;
         }
 
+        public void setMessage(string newMessage)
+        {
+            message = newMessage;
+        }
+
+        public string getMessage()
+        {
+            return message;
+        }
 
         //
         //This function returns the number of parameters for an offset
