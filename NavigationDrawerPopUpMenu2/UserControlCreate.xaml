@@ -6,15 +6,27 @@
              xmlns:local="clr-namespace:NavigationDrawerPopUpMenu2"
              mc:Ignorable="d" 
              Height="500" Width="500"
+             
              >
-    <Grid Margin="10">
-        <ListView Name="lvUsers">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Command" Width="120" DisplayMemberBinding="{Binding Name}" />
-                    <GridViewColumn Header="Description" Width="120" DisplayMemberBinding="{Binding Description}" />
-                </GridView>
-            </ListView.View>
-        </ListView>
+    <Grid>
+
+
+
+        <Grid VerticalAlignment="Bottom" Height="500" RenderTransformOrigin="0.401,0.658" Margin="10,0,-10,0"  >
+
+            <TextBlock Height="67" HorizontalAlignment="Left" Margin="183,54,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="289"  OpacityMask="Crimson" Foreground="Red" FontSize="20" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Name="TextIP_One" Text="Server IP Address" VerticalAlignment="Top" Width="135" Margin="10,145,0,0" Foreground="Black" FontSize="14" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,245,0,0" Name="TextPort_One" Text="Server Port Number" VerticalAlignment="Top" Width="135" Foreground="Black" FontSize="14" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,183,0,0" Name="TextIP_Two" Text="Client IP Address" VerticalAlignment="Top" Width="135" Foreground="Black" FontSize="14" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,292,0,0" Name="TextPort_Two" Text="Client Port Number" VerticalAlignment="Top" Width="135"  Foreground="Black" FontSize="14" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,145,0,0" Name="textboxTextOneIP" VerticalAlignment="Top" Width="222" Foreground="Black" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,245,0,0" Name="textboxTextTwoIP" VerticalAlignment="Top" Width="222"  Foreground="Black"/>
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,183,0,0" Name="textboxPortOne" VerticalAlignment="Top" Width="222"  Foreground="Black"/>
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,292,0,0" Name="textboxPortTwo" VerticalAlignment="Top" Width="222"  Foreground="Black"/>
+
+            <Button Content="Submit" Height="36" HorizontalAlignment="Left" Margin="35,360,0,0" Name="Submit" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.131,0.548" Click="Submit_Click" />
+            <Button Content="Reset" Height="36" HorizontalAlignment="Left" Margin="256,360,0,0" Name="ResetBtn" VerticalAlignment="Top" Width="149" Click="buttonReset_Click" />
+
+        </Grid>
     </Grid>
 </UserControl>

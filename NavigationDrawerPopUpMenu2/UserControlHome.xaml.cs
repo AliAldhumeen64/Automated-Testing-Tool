@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Net.Sockets;
 using System.Net;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace NavigationDrawerPopUpMenu2
 {
@@ -36,9 +37,28 @@ namespace NavigationDrawerPopUpMenu2
 
             }
 
-            //This is to fill the 3 list
-            this.example = (SharedLayoutCoordinator)((Grid)this.Content).FindResource("slc");
-            example.ItemsSource = typeof(Brushes).GetProperties().Select(p => p.Name).OrderBy(a => a).ToArray();
+
+
+
+            CommandList.Items.Add(new Command { Name = "First Command", Description = "DESCRIPTION" });
+            CommandList.Items.Add(new Command { Name = "Second Command", Description = "DESCRIPTION" });
+            CommandList.Items.Add(new Command { Name = "Third Command", Description = "DESCRIPTION" });
+
+            ToProcess.Items.Add(new Command { Name = "Third Command", Description = "DESCRIPTION" });
+            ToProcess.Items.Add(new Command { Name = "Second Command", Description = "DESCRIPTION" });
+
+
+        }
+        class Command
+        {
+            public string Name { get; set; }
+            public string Description { get; set; }
+           
+        }
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
 
         static void LaunchCommandLineApp()
@@ -90,4 +110,5 @@ namespace NavigationDrawerPopUpMenu2
             Console.WriteLine(message);
         }
     }
+
 }

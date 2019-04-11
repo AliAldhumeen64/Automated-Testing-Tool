@@ -5,34 +5,27 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:NavigationDrawerPopUpMenu2"
              mc:Ignorable="d" 
-             Background="White">
-    <Grid>
-        <Grid.Resources>
-            <ItemsPanelTemplate x:Key="ItemsPanelTemplate">
-                <local:SharedLayoutStackPanel IsItemsHost="True"/>
-            </ItemsPanelTemplate>
-
-            <local:SharedLayoutCoordinator x:Key="slc" ItemsSource="{Binding Path=MyItems}" />
-        </Grid.Resources>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-        </Grid.ColumnDefinitions>
-        <Border Grid.Column="0" Margin="10,10,5,10" BorderBrush="Black" BorderThickness="1">
-            <ListBox 
-            local:SharedLayoutCoordinator.Region="{Binding Source={StaticResource slc}, Path=[0]}" 
-            ItemsPanel="{StaticResource ResourceKey=ItemsPanelTemplate}" />
-        </Border>
-        <Border Grid.Column="1" Margin="5,10" BorderBrush="Black" BorderThickness="1">
-            <ListBox 
-            local:SharedLayoutCoordinator.Region="{Binding Source={StaticResource slc}, Path=[1]}" 
-            ItemsPanel="{StaticResource ResourceKey=ItemsPanelTemplate}" />
-        </Border>
-        <Border Grid.Column="2" Margin="5,10,10,10" BorderBrush="Black" BorderThickness="1">
-            <ListBox 
-            local:SharedLayoutCoordinator.Region="{Binding Source={StaticResource slc}, Path=[2]}" 
-            ItemsPanel="{StaticResource ResourceKey=ItemsPanelTemplate}" />
-        </Border>
+             
+             Width="500" Height="500">
+    <Grid Background="White">
+        <ListView  x:Name="CommandList" Margin="0,0,10,352">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Id}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView  x:Name="ToProcess" Margin="0,191,10,161">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Constraint" DisplayMemberBinding="{Binding Id}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Done" Margin="10,418,318,50"></Button>
+        <TextBox  PreviewTextInput="NumberValidationTextBox" Margin="272,394,104,50" Foreground="Black" FontSize="25" TextAlignment="Center"></TextBox>
+        
     </Grid>
 </UserControl>
