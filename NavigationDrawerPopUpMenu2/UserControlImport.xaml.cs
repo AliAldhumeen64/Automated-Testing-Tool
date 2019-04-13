@@ -24,7 +24,7 @@ namespace NavigationDrawerPopUpMenu2
     {
         private bool hasDisplayedCommands = false;
         //this will literally have the sync key value that is read from the file if the "hasReadFile" bool value is true
-        public static int syncKey;
+        public static UInt32 syncKey;
 
         //this will literally have the command list that is read from the file if the "hasReadFile" bool value is true
         public static List<Command> commandList;
@@ -74,13 +74,13 @@ namespace NavigationDrawerPopUpMenu2
                 //this literally grabs the list of commands from the import page
                 List<Command> readCommandList = NavigationDrawerPopUpMenu2.UserControlImport.commandList;
 
-                List<Commands> items = new List<Commands>();
+                List<UserControlHome.Commands> items = new List<UserControlHome.Commands>();
 
                 for (int i = 0; i < readCommandList.Count; i++)
                 {
                     //if a command doesnt have a reply type, it isnt a command
                     if (!(readCommandList.ElementAt(i).getReplyName().Equals("None")))
-                        items.Add(new Commands() { Name = readCommandList.ElementAt(i).getPayloadName(), Description = readCommandList.ElementAt(i).getDescription() });
+                        items.Add(new UserControlHome.Commands() { Name = readCommandList.ElementAt(i).getPayloadName(), Id = readCommandList.ElementAt(i).getDescription() });
 
                 }
                 lvUsers.ItemsSource = items;
@@ -161,16 +161,15 @@ namespace NavigationDrawerPopUpMenu2
         //This function takes in the DocX object that has opened the desired file, then returns the sync key
 
         //TO-DO change the code of how this function works to work for ANY IDD through use of docX.Paragraphs in the specific cell with the sync key, currently only works with this one
-        public static int getSyncKey(DocX docx)
+        public static UInt32 getSyncKey(DocX docx)
         {
-            int syncKey = 0;
+            UInt32 syncKey = 0;
             string text = docx.Text;
             var textList = docx.FindAll("Sync Key");
             var foundIndex = textList.ElementAt(0).ToString();
             int startIndex = int.Parse(foundIndex) + 38;
             int endIndex = startIndex + 32;
-            string stringKey = text.Substring(startIndex, 29);
-            syncKey = Convert.ToInt32(stringKey, 2);
+            UInt32.TryParse(text.Substring(startIndex, 29), out syncKey);
             return syncKey;
         }
 
@@ -183,14 +182,14 @@ namespace NavigationDrawerPopUpMenu2
             Xceed.Words.NET.Paragraph currentP;
             string commandPayloadName, commandReplyName, commandDescription;
             bool commandIsCommand;
-            Int32 commandReplyValue, commandPayloadType;
+            UInt32 commandReplyValue, commandPayloadType;
 
             commandPayloadType = 0;
             commandPayloadName = "no message payload";
             commandIsCommand = false;
             List<Offset> firstCommandOffsets = null;
             commandReplyName = "None";
-            commandReplyValue = -1;
+            commandReplyValue = 0;
             commandDescription = "None";
             Command firstCommand = new Command(commandPayloadType, commandPayloadName, commandIsCommand, firstCommandOffsets, commandReplyName, commandReplyValue, commandDescription);
             commandList.Add(firstCommand);
@@ -205,16 +204,16 @@ namespace NavigationDrawerPopUpMenu2
                         commandIsCommand = true;
                         commandPayloadName = paraList.ElementAt(i + 1).Text + " command";
                         commandReplyName = paraList.ElementAt(i + 5).Text;
-                        commandReplyValue = int.Parse(paraList.ElementAt(i + 7).Text);
+                        commandReplyValue = Convert.ToUInt32(paraList.ElementAt(i + 7).Text);
                     }
                     else
                     {
                         commandIsCommand = false;
                         commandPayloadName = paraList.ElementAt(i + 1).Text + " reply";
                         commandReplyName = "None";
-                        commandReplyValue = -1;
+                        commandReplyValue = 0;
                     }
-                    commandPayloadType = Int32.Parse(paraList.ElementAt(i + 3).Text);
+                    commandPayloadType = Convert.ToUInt32(paraList.ElementAt(i + 3).Text);
 
                     //should never actually be null
                     Xceed.Words.NET.Table testTable = null;
@@ -237,14 +236,6 @@ namespace NavigationDrawerPopUpMenu2
 
             return commandList;
 
-        }
-
-        //Object command to test
-        public class Commands
-        {
-            public string Name { get; set; }
-
-            public String Description { get; set; }
         }
 
         public static List<Offset> getOffsetCommands(Xceed.Words.NET.Table dataTable)

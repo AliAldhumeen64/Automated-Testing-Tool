@@ -10,12 +10,12 @@ namespace NavigationDrawerPopUpMenu2
 {
     public class Command
     {
-        protected Int32 payloadType;
+        protected UInt32 payloadType;
         protected string payloadName;
         protected bool isCommand;
         protected List<Offset> offsetList;
         protected string replyName;
-        protected Int32 replyValue;
+        protected UInt32 replyValue;
         protected string description;
 
         public Command()
@@ -29,7 +29,7 @@ namespace NavigationDrawerPopUpMenu2
             description = "";
         }
 
-        public Command(Int32 newPayloadType, string newPayloadName, bool newIsCommand, List<Offset> newOffsetList, string newReplyName, Int32 newReplyValue, string newDescription)
+        public Command(UInt32 newPayloadType, string newPayloadName, bool newIsCommand, List<Offset> newOffsetList, string newReplyName, UInt32 newReplyValue, string newDescription)
         {
             payloadType = newPayloadType;
             payloadName = newPayloadName;
@@ -40,11 +40,11 @@ namespace NavigationDrawerPopUpMenu2
             description = newDescription;
         }
 
-        public Int32 getPayloadType()
+        public UInt32 getPayloadType()
         {
             return payloadType;
         }
-        public void setPayloadType(Int32 newPayloadType)
+        public void setPayloadType(UInt32 newPayloadType)
         {
             payloadType = newPayloadType;
         }
@@ -80,11 +80,11 @@ namespace NavigationDrawerPopUpMenu2
         {
             return replyName;
         }
-        public void setReplyValue(Int32 newReplyValue)
+        public void setReplyValue(UInt32 newReplyValue)
         {
             replyValue = newReplyValue;
         }
-        public Int32 getReplyValue()
+        public UInt32 getReplyValue()
         {
             return replyValue;
         }

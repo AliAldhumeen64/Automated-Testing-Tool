@@ -12,13 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Net.Sockets;
+using System.Net;
+using System.Diagnostics;
 
 namespace NavigationDrawerPopUpMenu2
 {
     
     public partial class UserControlCreate : UserControl
     {
-        
+        private static UdpClient udp;
 
         public UserControlCreate()
         {
@@ -71,9 +74,82 @@ namespace NavigationDrawerPopUpMenu2
                 string port_one = textboxPortOne.Text;
                 string port_two = textboxPortTwo.Text;
             }
-            }
 
-    
+            LaunchCommandLineApp();
+        }
+
+        static void LaunchCommandLineApp()
+        {
+            //this is connecting to the bsc itself
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.FileName = "bsc.exe";
+            startInfo.WindowStyle = ProcessWindowStyle.Normal;
+            startInfo.Arguments = "127.0.0.1 2020 2021";
+            try
+            {
+
+                using (Process exeProcess = Process.Start(startInfo))
+                {
+                    
+                    System.Threading.Thread.Sleep(1000);
+                    System.Console.WriteLine("it must get here at least right");
+                    Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+                    sock.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+                    sock.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ExclusiveAddressUse, false);
+                    IPAddress serverAddr = IPAddress.Parse("127.0.0.1");
+                    IPEndPoint endPoint = new IPEndPoint(serverAddr, 2020);
+                    
+                    BaseMessage bsc;
+                    System.Console.WriteLine("Does it get this far");
+
+                    //this should read in the list of commands in the queue of commands to be run
+                    //READ IN HERE
+                    //READ IN HERE
+                    //READ IN HERE
+                    List<Command> tempCommandQueue = new List<Command>();
+                    List<Offset> tempCommand1Offsets = new List<Offset>();
+
+                    Offset tempOffset1 = new Offset("0", "XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXA", "UINT", "none", "temp offset description");
+                    tempOffset1.setMessage("00000000000000000000000000000001");
+
+                    tempCommand1Offsets.Add(tempOffset1);
+                    Command tempCommand1 = new Command(14, "battle short command", true, tempCommand1Offsets, "general reply", 10000000, "test description");
+                    tempCommandQueue.Add(tempCommand1);
+
+                    //the loop should go command->return value ->command->return value->command->return value
+
+                    for (int i = 0; i < tempCommandQueue.Count; i++)
+                    {
+                        bsc = new BaseMessage(tempCommandQueue.ElementAt(i));
+                        sock.SendTo(bsc.GetByteArray(tempCommandQueue.ElementAt(i)), bsc.GetByteArray(tempCommandQueue.ElementAt(i)).Length, SocketFlags.None, endPoint);
+                        System.Console.WriteLine("Sent Message successfully.");
+                        udp = new UdpClient(2021);
+                        udp.BeginReceive(DataReceived, new object());
+                    }
+
+                    exeProcess.WaitForExit();
+                    //bsc parameters: client ip
+                } // end using
+            }
+            catch
+            {
+                System.Console.WriteLine("Error in starting file process.");
+            } // end try-catch
+
+        } // end LaunchCommandLineApp()
+
+        //this never gets called, no idea how this works or if this works
+        private static void DataReceived(IAsyncResult ar)
+        {
+            System.Console.WriteLine("Waiting to receive...");
+            IPAddress serverAddr = IPAddress.Parse("127.0.0.1");
+            IPEndPoint ip = new IPEndPoint(serverAddr, 2021);
+            byte[] bytes = udp.EndReceive(ar, ref ip);
+            string message = Encoding.ASCII.GetString(bytes);
+            Console.WriteLine(message);
+        }
+
+
     }
-    }
+}
 

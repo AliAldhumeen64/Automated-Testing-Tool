@@ -88,9 +88,22 @@ namespace NavigationDrawerPopUpMenu2
             message = newMessage;
         }
 
-        public string getMessage()
+        public UInt32 getMessage()
         {
-            return message;
+            UInt32 trueMessage;
+
+            trueMessage = Convert.ToUInt32(message, 2);
+
+            return trueMessage;
+        }
+
+        public float getMessageFloat()
+        {
+            float trueMessage;
+
+            trueMessage = float.Parse(Convert.ToInt32(message, 2).ToString());
+
+            return trueMessage;
         }
 
         //
