@@ -84,7 +84,7 @@ namespace NavigationDrawerPopUpMenu2
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.FileName = "bsc.exe";
             startInfo.WindowStyle = ProcessWindowStyle.Normal;
-            startInfo.Arguments = "127.0.0.1 2020 2021";
+            startInfo.Arguments = "127.0.0.1 42020 42021";
             try
             {
 
@@ -92,16 +92,15 @@ namespace NavigationDrawerPopUpMenu2
                 {
                     
                     System.Threading.Thread.Sleep(1000);
-                    System.Console.WriteLine("it must get here at least right");
                     Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
                     sock.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
                     sock.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ExclusiveAddressUse, false);
                     IPAddress serverAddr = IPAddress.Parse("127.0.0.1");
-                    IPEndPoint endPoint = new IPEndPoint(serverAddr, 2020);
-                    
-                    BaseMessage bsc;
-                    System.Console.WriteLine("Does it get this far");
+                    IPEndPoint endPoint = new IPEndPoint(serverAddr, 42020);
+                    IPEndPoint endPoint2 = new IPEndPoint(serverAddr, 42021);
 
+                    BaseMessage bsc;
+                    udp = new UdpClient(endPoint2);
                     //this should read in the list of commands in the queue of commands to be run
                     //READ IN HERE
                     //READ IN HERE
@@ -115,16 +114,21 @@ namespace NavigationDrawerPopUpMenu2
                     tempCommand1Offsets.Add(tempOffset1);
                     Command tempCommand1 = new Command(14, "battle short command", true, tempCommand1Offsets, "general reply", 10000000, "test description");
                     tempCommandQueue.Add(tempCommand1);
+                    tempCommandQueue.Add(tempCommand1);
+                    tempCommandQueue.Add(tempCommand1);
+
+                    
 
                     //the loop should go command->return value ->command->return value->command->return value
 
                     for (int i = 0; i < tempCommandQueue.Count; i++)
                     {
                         bsc = new BaseMessage(tempCommandQueue.ElementAt(i));
-                        sock.SendTo(bsc.GetByteArray(tempCommandQueue.ElementAt(i)), bsc.GetByteArray(tempCommandQueue.ElementAt(i)).Length, SocketFlags.None, endPoint);
+                        udp.Send(bsc.GetByteArray(tempCommandQueue.ElementAt(i)), bsc.GetByteArray(tempCommandQueue.ElementAt(i)).Length, endPoint);
+                        //sock.SendTo(bsc.GetByteArray(tempCommandQueue.ElementAt(i)), bsc.GetByteArray(tempCommandQueue.ElementAt(i)).Length, SocketFlags.None, endPoint);
                         System.Console.WriteLine("Sent Message successfully.");
-                        udp = new UdpClient(2021);
-                        udp.BeginReceive(DataReceived, new object());
+                        udp.BeginReceive(new AsyncCallback(DataReceived), new object());
+
                     }
 
                     exeProcess.WaitForExit();
@@ -138,17 +142,23 @@ namespace NavigationDrawerPopUpMenu2
 
         } // end LaunchCommandLineApp()
 
-        //this never gets called, no idea how this works or if this works
         private static void DataReceived(IAsyncResult ar)
         {
             System.Console.WriteLine("Waiting to receive...");
             IPAddress serverAddr = IPAddress.Parse("127.0.0.1");
-            IPEndPoint ip = new IPEndPoint(serverAddr, 2021);
+            IPEndPoint ip = new IPEndPoint(serverAddr, 42021);
             byte[] bytes = udp.EndReceive(ar, ref ip);
-            string message = Encoding.ASCII.GetString(bytes);
-            Console.WriteLine(message);
+            for(int j=0; j < bytes.Length; j++)
+            {
+                System.Console.WriteLine(bytes[j].ToString());
+            }
+            int offsetCount = bytes.Length / 4;
+            //for(int i =0; i < offsetCount; i++)
+            //{
+            //    UInt32 message = BitConverter.ToUInt32(bytes, i*4);
+            //    System.Console.WriteLine(message);
+            //}
         }
-
 
     }
 }

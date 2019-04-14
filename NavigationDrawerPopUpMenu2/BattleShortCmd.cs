@@ -55,10 +55,10 @@ namespace NavigationDrawerPopUpMenu2
             PayloadSize = Convert.ToUInt32(GetPayloadBytes(commandToSend).Length);
         }
 
-        //public BaseMessage(byte[] replyBytes, Command replyCommand)
-        //{
+        public BaseMessage(byte[] replyBytes, Command replyCommand)
+        {
 
-        //}
+        }
 
         public uint MessageStartIndicator
         {
@@ -70,6 +70,7 @@ namespace NavigationDrawerPopUpMenu2
             private set
             {
                 byte[] dataAsBytes = BitConverter.GetBytes(value);
+                //System.Console.WriteLine(BitConverter.ToString(dataAsBytes));
                 CopyBytes(dataAsBytes, m_Header, 0);
             }
         }

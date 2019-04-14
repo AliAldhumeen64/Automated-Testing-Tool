@@ -118,8 +118,8 @@ namespace NavigationDrawerPopUpMenu2
             //USED FOR DEBUGGING
             //
             //List<Offset> currentOffsets;
-            //Debug.WriteLine("The Sync key is: ");
-            //Debug.WriteLine(syncKey);
+            Debug.WriteLine("The Sync key is: ");
+            Debug.WriteLine(syncKey);
             //Debug.WriteLine(" ");
             //Debug.WriteLine(commandList.ElementAt(0).getPayloadName());
             //Debug.WriteLine(commandList.ElementAt(0).getPayloadType());
@@ -169,7 +169,9 @@ namespace NavigationDrawerPopUpMenu2
             var foundIndex = textList.ElementAt(0).ToString();
             int startIndex = int.Parse(foundIndex) + 38;
             int endIndex = startIndex + 32;
-            UInt32.TryParse(text.Substring(startIndex, 29), out syncKey);
+
+            string syncKeystr = text.Substring(startIndex, 29);
+            syncKey = Convert.ToUInt32(syncKeystr, 2);
             return syncKey;
         }
 
