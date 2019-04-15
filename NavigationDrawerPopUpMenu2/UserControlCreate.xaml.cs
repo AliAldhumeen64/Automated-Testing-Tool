@@ -95,37 +95,37 @@ namespace NavigationDrawerPopUpMenu2
                     Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
                     sock.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
                     sock.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ExclusiveAddressUse, false);
+
+
+                    //these should be read in from the create page's UI elements
                     IPAddress serverAddr = IPAddress.Parse("127.0.0.1");
                     IPEndPoint endPoint = new IPEndPoint(serverAddr, 42020);
                     IPEndPoint endPoint2 = new IPEndPoint(serverAddr, 42021);
 
                     BaseMessage bsc;
                     udp = new UdpClient(endPoint2);
-                    //this should read in the list of commands in the queue of commands to be run
-                    //READ IN HERE
-                    //READ IN HERE
-                    //READ IN HERE
-                    List<Command> tempCommandQueue = new List<Command>();
-                    List<Offset> tempCommand1Offsets = new List<Offset>();
 
+                    //this should read in the list of commands in the queue of commands to be run
+                    List<Command> commandQueue = new List<Command>();
+
+
+                    List<Offset> tempCommand1Offsets = new List<Offset>();
                     Offset tempOffset1 = new Offset("0", "XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXA", "UINT", "none", "temp offset description");
                     tempOffset1.setMessage("00000000000000000000000000000001");
 
                     tempCommand1Offsets.Add(tempOffset1);
                     Command tempCommand1 = new Command(14, "battle short command", true, tempCommand1Offsets, "general reply", 10000000, "test description");
-                    tempCommandQueue.Add(tempCommand1);
-                    tempCommandQueue.Add(tempCommand1);
-                    tempCommandQueue.Add(tempCommand1);
+                    commandQueue.Add(tempCommand1);
+                    commandQueue.Add(tempCommand1);
+                    commandQueue.Add(tempCommand1);
 
                     
 
-                    //the loop should go command->return value ->command->return value->command->return value
 
-                    for (int i = 0; i < tempCommandQueue.Count; i++)
+                    for (int i = 0; i < commandQueue.Count; i++)
                     {
-                        bsc = new BaseMessage(tempCommandQueue.ElementAt(i));
-                        udp.Send(bsc.GetByteArray(tempCommandQueue.ElementAt(i)), bsc.GetByteArray(tempCommandQueue.ElementAt(i)).Length, endPoint);
-                        //sock.SendTo(bsc.GetByteArray(tempCommandQueue.ElementAt(i)), bsc.GetByteArray(tempCommandQueue.ElementAt(i)).Length, SocketFlags.None, endPoint);
+                        bsc = new BaseMessage(commandQueue.ElementAt(i));
+                        udp.Send(bsc.GetByteArray(commandQueue.ElementAt(i)), bsc.GetByteArray(commandQueue.ElementAt(i)).Length, endPoint);
                         System.Console.WriteLine("Sent Message successfully.");
                         udp.BeginReceive(new AsyncCallback(DataReceived), new object());
 
@@ -150,14 +150,10 @@ namespace NavigationDrawerPopUpMenu2
             byte[] bytes = udp.EndReceive(ar, ref ip);
             for(int j=0; j < bytes.Length; j++)
             {
+                //This is where we would compare the returned values to the expected values in the read in document
                 System.Console.WriteLine(bytes[j].ToString());
             }
             int offsetCount = bytes.Length / 4;
-            //for(int i =0; i < offsetCount; i++)
-            //{
-            //    UInt32 message = BitConverter.ToUInt32(bytes, i*4);
-            //    System.Console.WriteLine(message);
-            //}
         }
 
     }

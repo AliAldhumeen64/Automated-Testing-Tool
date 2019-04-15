@@ -186,6 +186,7 @@ namespace NavigationDrawerPopUpMenu2
             bool commandIsCommand;
             UInt32 commandReplyValue, commandPayloadType;
 
+            //this is all default values for the first command in the list, which is a command that does nothing
             commandPayloadType = 0;
             commandPayloadName = "no message payload";
             commandIsCommand = false;
@@ -231,7 +232,8 @@ namespace NavigationDrawerPopUpMenu2
                     }
                     List<Offset> commandOffsets = getOffsetCommands(testTable);
 
-                    Command nextCommand = new Command(commandPayloadType, commandPayloadName, commandIsCommand, commandOffsets, commandReplyName, commandReplyValue, commandDescription);
+                    Command nextCommand = new Command(commandPayloadType, commandPayloadName, commandIsCommand,
+                        commandOffsets, commandReplyName, commandReplyValue, commandDescription);
                     commandList.Add(nextCommand);
                 }
             }
