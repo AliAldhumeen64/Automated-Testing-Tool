@@ -83,6 +83,9 @@
     <Compile Include="Command.cs" />
     <Compile Include="Offset.cs" />
     <Compile Include="SharedLayoutStackPanel.cs" />
+    <Compile Include="UserControlConsle.xaml.cs">
+      <DependentUpon>UserControlConsle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlImport.xaml.cs">
       <DependentUpon>UserControlImport.xaml</DependentUpon>
     </Compile>
@@ -104,6 +107,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControlConsle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControlImport.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
