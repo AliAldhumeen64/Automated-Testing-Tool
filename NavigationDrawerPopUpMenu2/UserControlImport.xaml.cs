@@ -44,29 +44,12 @@ namespace NavigationDrawerPopUpMenu2
             return commandList.ElementAt(0);
         }
 
-        //these will be needed for sending a message but wont be saved here, or will it?
-        //protected int nextMessageIdentifier = 1; //increase this value by 1 everytime a message is sent.
-        //protected int payloadSize;
-        //protected int timeStampMSB = 0;
-        //protected int timeStampLSB = 0;
-
-
 
         public UserControlImport()
         {
           
         InitializeComponent();
             OpenFileClicked();
-
-            //
-            //NEXT STEPS HERE
-            //
-            //We need to display the offset values for each command, with their descriptions
-            //we need to let the user put commands into the queue of commands, and enter the offset values for the command, maybe only show the offsets and their descriptions when the user wants to enter them?
-            //once the user is happy with what they put into the queue, the home tab needs to access the queue with the parameter values entered so that they can be sent to the BSC
-
-            // AND REMEMBER
-            // WE CAN DO IT
 
 
             if (NavigationDrawerPopUpMenu2.UserControlImport.hasReadFile && !hasDisplayedCommands)
@@ -159,19 +142,29 @@ namespace NavigationDrawerPopUpMenu2
         }
 
         //This function takes in the DocX object that has opened the desired file, then returns the sync key
-
-        //TO-DO change the code of how this function works to work for ANY IDD through use of docX.Paragraphs in the specific cell with the sync key, currently only works with this one
         public static UInt32 getSyncKey(DocX docx)
         {
             UInt32 syncKey = 0;
-            string text = docx.Text;
-            var textList = docx.FindAll("Sync Key");
-            var foundIndex = textList.ElementAt(0).ToString();
-            int startIndex = int.Parse(foundIndex) + 38;
-            int endIndex = startIndex + 32;
+            var paraList = docx.Paragraphs;
+            Xceed.Words.NET.Paragraph currentP;
+            string currentString;
+            string syncKeyStr="0"; //this default value should never be returned
 
-            string syncKeystr = text.Substring(startIndex, 29);
-            syncKey = Convert.ToUInt32(syncKeystr, 2);
+            for (int i = 0; i < paraList.Count; i++)
+            {
+                currentP = paraList.ElementAt(i);
+                if (currentP.Text.Contains("Sync Key"))
+                {
+                    currentString = paraList.ElementAt(i + 1).Text;
+                    //this cuts the text down to the sync key value and some text we don't want after it
+                    //we have to do this because the sync key has a variable length;
+                    currentString.Trim();
+                    syncKeyStr = currentString.Split(' ').ElementAt(0);
+                    break;
+                }
+                
+            }
+            syncKey = Convert.ToUInt32(syncKeyStr, 2);
             return syncKey;
         }
 
