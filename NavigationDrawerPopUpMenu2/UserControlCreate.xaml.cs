@@ -22,10 +22,12 @@ namespace NavigationDrawerPopUpMenu2
     public partial class UserControlCreate : UserControl
     {
         private static UdpClient udp;
-        string this_Ip;
-        string system_Ip;
-        string this_Port;
-        string system_Port;
+        private static string this_Ip;
+        private static string system_Ip;
+        private static string this_Port;
+        private static string system_Port;
+        private static List<BaseMessage> replies = new List<BaseMessage>();
+        private static List<Command> commandQueue = new List<Command>();
 
         public UserControlCreate()
         {
@@ -111,7 +113,7 @@ namespace NavigationDrawerPopUpMenu2
                     udp = new UdpClient(endPoint2);
 
                     //this should read in the list of commands in the queue of commands to be run
-                    List<Command> commandQueue = new List<Command>();
+                    
 
 
                     List<Offset> tempCommand1Offsets = new List<Offset>();
@@ -120,8 +122,6 @@ namespace NavigationDrawerPopUpMenu2
 
                     tempCommand1Offsets.Add(tempOffset1);
                     Command tempCommand1 = new Command(14, "battle short command", true, tempCommand1Offsets, "general reply", 10000000, "test description");
-                    commandQueue.Add(tempCommand1);
-                    commandQueue.Add(tempCommand1);
                     commandQueue.Add(tempCommand1);
 
                     
@@ -149,15 +149,22 @@ namespace NavigationDrawerPopUpMenu2
         private static void DataReceived(IAsyncResult ar)
         {
             System.Console.WriteLine("Waiting to receive...");
-            IPAddress serverAddr = IPAddress.Parse("127.0.0.1");
-            IPEndPoint ip = new IPEndPoint(serverAddr, 42021);
+            IPAddress serverAddr = IPAddress.Parse(system_Ip);
+            IPEndPoint ip = new IPEndPoint(serverAddr, Int32.Parse(system_Port));
             byte[] bytes = udp.EndReceive(ar, ref ip);
             for(int j=0; j < bytes.Length; j++)
             {
                 //This is where we would compare the returned values to the expected values in the read in document
-                System.Console.WriteLine(bytes[j].ToString());
+                System.Console.WriteLine(bytes[j]);
             }
-            int offsetCount = bytes.Length / 4;
+            //int offsetCount = bytes.Length / 4;
+            BaseMessage thisReply = new BaseMessage(bytes);
+
+        }
+
+        private static void compareCommand(Command reply, BaseMessage response)
+        {
+
         }
 
     }

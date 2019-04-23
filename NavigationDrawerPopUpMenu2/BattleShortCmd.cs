@@ -55,9 +55,13 @@ namespace NavigationDrawerPopUpMenu2
             PayloadSize = Convert.ToUInt32(GetPayloadBytes(commandToSend).Length);
         }
 
-        public BaseMessage(byte[] replyBytes, Command replyCommand)
+        public BaseMessage(byte[] replyBytes)
         {
-
+            const uint HEADER_SIZE_WORDS = 6;
+            m_Header = new byte[HEADER_SIZE_WORDS * WORD_SIZE_BYTES];
+            MessageStartIndicator = UserControlImport.syncKey;
+            MessageId = messageIdCounter;
+            messageIdCounter++;
         }
 
         public uint MessageStartIndicator

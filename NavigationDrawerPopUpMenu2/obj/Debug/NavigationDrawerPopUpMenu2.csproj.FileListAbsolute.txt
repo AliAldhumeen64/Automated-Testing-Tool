@@ -237,3 +237,9 @@ P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsle.g.cs
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsle.baml
+<<<<<<< Updated upstream
+=======
+P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csprojResolveAssemblyReference.cache
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsle.g.cs
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsle.baml
+>>>>>>> Stashed changes
