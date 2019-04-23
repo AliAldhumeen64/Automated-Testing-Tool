@@ -20,8 +20,8 @@
             <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,183,0,0" Name="TextIP_Two" Text="Client IP Address" VerticalAlignment="Top" Width="135" Foreground="Black" FontSize="14" />
             <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,292,0,0" Name="TextPort_Two" Text="Client Port Number" VerticalAlignment="Top" Width="135"  Foreground="Black" FontSize="14" />
             <TextBox Height="23" HorizontalAlignment="Left" Margin="183,145,0,0" Name="textboxTextOneIP" VerticalAlignment="Top" Width="222" Foreground="Black" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,245,0,0" Name="textboxTextTwoIP" VerticalAlignment="Top" Width="222"  Foreground="Black"/>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,183,0,0" Name="textboxPortOne" VerticalAlignment="Top" Width="222"  Foreground="Black"/>
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,245,0,0" Name="textboxPortOne" VerticalAlignment="Top" Width="222"  Foreground="Black"/>
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,183,0,0" Name="textboxTextTwoIP" VerticalAlignment="Top" Width="222"  Foreground="Black"/>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="183,292,0,0" Name="textboxPortTwo" VerticalAlignment="Top" Width="222"  Foreground="Black"/>
 
             <Button Content="Submit" Height="36" HorizontalAlignment="Left" Margin="35,360,0,0" Name="Submit" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.131,0.548" Click="Submit_Click" />
