@@ -84,15 +84,27 @@ namespace NavigationDrawerPopUpMenu2
 
         private void ListViewItem_OffestList(object sender, MouseButtonEventArgs e)
         {
-            Commands selectedItemsTwo = (Commands)(ToProcess.SelectedItems);
-
-            List<Offset> tempOffset = selectedItemsTwo.cmd.getOffsetList();
-            for(int j = 0; j< tempOffset.Count; j++)
+            Commands test = new Commands();
+            if(ToProcess.SelectedItem != null)
             {
-                offsetListView.Items.Add(tempOffset.ElementAt(j));
-                    
-            }
+                if (ToProcess.SelectedItem.GetType().Equals(test.GetType()))
+                {
+                    Commands selectedItemsTwo = (Commands)(ToProcess.SelectedItem);
 
+                    for(int i = offsetListView.Items.Count-1; i >= 0; i--)
+                    {
+                        offsetListView.Items.RemoveAt(i);
+                    }
+
+                    List<Offset> tempOffset = selectedItemsTwo.cmd.getOffsetList();
+                    for (int j = 0; j < tempOffset.Count; j++)
+                    {
+                        offsetListView.Items.Add(tempOffset.ElementAt(j));
+
+                    }
+                }
+            }
+            
         }
 
 
