@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:NavigationDrawerPopUpMenu2"
              mc:Ignorable="d" 
              
-             Width="500" Height="500">
+             Width="800" Height="500">
     <Grid Background="White">
         <ListView  x:Name="CommandList" Margin="0,0,10,352">
             <ListView.View>
@@ -22,16 +22,25 @@
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
-        <ListView  x:Name="ToProcess" Margin="0,191,10,161">
+        <ListView  x:Name="ToProcess" Margin="0,191,396,161">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
-                    <GridViewColumn Header="Constraint" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Id}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Done" Margin="10,418,318,50"></Button>
-        <TextBox  PreviewTextInput="NumberValidationTextBox" Margin="272,394,104,50" Foreground="Black" FontSize="25" TextAlignment="Center"></TextBox>
-        
+        <Button Content="Done" Margin="272,429,308,39"></Button>
+        <TextBox  PreviewTextInput="NumberValidationTextBox" Margin="10,405,560,39" Foreground="Black" FontSize="25" TextAlignment="Center"></TextBox>
+        <ListView  x:Name="offsetListView" Margin="409,191,10,161">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Id}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox x:Name="offsetsInput" Margin="522,405,10,39" Foreground="Black" FontSize="25" TextAlignment="Center"/>
+
     </Grid>
 </UserControl>

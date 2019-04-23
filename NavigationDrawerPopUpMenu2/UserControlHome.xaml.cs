@@ -40,7 +40,7 @@ namespace NavigationDrawerPopUpMenu2
                 {
                     //if a command doesnt have a reply type, it isnt a command
                     if (!(readCommandList.ElementAt(i).getReplyName().Equals("None")))
-                        items.Add(new UserControlHome.Commands() { Name = readCommandList.ElementAt(i).getPayloadName(), Id = readCommandList.ElementAt(i).getDescription() });
+                        items.Add(new UserControlHome.Commands() { cmd = readCommandList.ElementAt(i), Name = readCommandList.ElementAt(i).getPayloadName(), Id = readCommandList.ElementAt(i).getDescription() });
 
                 }
                 CommandList.ItemsSource = items;
@@ -48,17 +48,19 @@ namespace NavigationDrawerPopUpMenu2
                 //CommandList.Items.Add(new Commands { Name = "First Command", Id = "DESCRIPTION" });
                 // CommandList.Items.Add(new Commands { Name = "Second Command", Id = "DESCRIPTION" });
                 // CommandList.Items.Add(new Commands { Name = "Third Command", Id = "DESCRIPTION" });
-
-
             }
-
         }
         //Object command to test
         public class Commands
         {
+            public Command cmd { get; set; }
+           
+ 
             public string Name { get; set; }
 
             public string Id { get; set; }
+
+
         }
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
@@ -74,11 +76,20 @@ namespace NavigationDrawerPopUpMenu2
             {
                 ToProcess.Items.Add(selectedItems[i]);
             }
-
-
-
         }
-   
+
+        private void ListViewItem_DisplayOffests(Commands sender, MouseButtonEventArgs e)
+        {
+            var selectedItems = ToProcess.SelectedItems;
+
+            Console.WriteLine("It worked");
+
+            for (int i = 0; i < selectedItems.Count; i++)
+            {
+                
+            }
+        }
+
     }
 
 }
