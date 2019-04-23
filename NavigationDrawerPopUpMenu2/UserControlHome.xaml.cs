@@ -29,26 +29,28 @@ namespace NavigationDrawerPopUpMenu2
         {
             InitializeComponent();
 
-            //this literally grabs the list of commands from the import page
-            List<Command> readCommandList = UserControlImport.commandList;
-
-            List<Commands> items = new List<Commands>();
-
-            for (int i = 0; i < readCommandList.Count; i++)
+            if (NavigationDrawerPopUpMenu2.UserControlImport.hasReadFile)
             {
-                //if a command doesnt have a reply type, it isnt a command
-                if (!(readCommandList.ElementAt(i).getReplyName().Equals("None")))
-                    items.Add(new UserControlHome.Commands() { Name = readCommandList.ElementAt(i).getPayloadName(), Id = readCommandList.ElementAt(i).getDescription() });
+                //this literally grabs the list of commands from the import page
+                List<Command> readCommandList = UserControlImport.commandList;
+
+                List<Commands> items = new List<Commands>();
+
+                for (int i = 0; i < readCommandList.Count; i++)
+                {
+                    //if a command doesnt have a reply type, it isnt a command
+                    if (!(readCommandList.ElementAt(i).getReplyName().Equals("None")))
+                        items.Add(new UserControlHome.Commands() { Name = readCommandList.ElementAt(i).getPayloadName(), Id = readCommandList.ElementAt(i).getDescription() });
+
+                }
+                CommandList.ItemsSource = items;
+
+                //CommandList.Items.Add(new Commands { Name = "First Command", Id = "DESCRIPTION" });
+                // CommandList.Items.Add(new Commands { Name = "Second Command", Id = "DESCRIPTION" });
+                // CommandList.Items.Add(new Commands { Name = "Third Command", Id = "DESCRIPTION" });
+
 
             }
-            CommandList.ItemsSource = items;
-
-            CommandList.Items.Add(new Commands { Name = "First Command", Id = "DESCRIPTION" });
-            CommandList.Items.Add(new Commands { Name = "Second Command", Id = "DESCRIPTION" });
-            CommandList.Items.Add(new Commands { Name = "Third Command", Id = "DESCRIPTION" });
-
-           
-
 
         }
         //Object command to test
