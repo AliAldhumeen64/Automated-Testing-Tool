@@ -10,11 +10,11 @@ namespace NavigationDrawerPopUpMenu2
 {
     public class Offset
     {
-        private string offsetValue;
+        public string offsetValue { get; set; }
         private string mask;
         private string type;
         private string units;
-        private string description;
+        public string description { get; set; }
         private int parameterCount;
         private string message;
 

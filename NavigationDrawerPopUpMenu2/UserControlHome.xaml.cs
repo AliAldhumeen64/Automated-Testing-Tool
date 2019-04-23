@@ -25,6 +25,8 @@ namespace NavigationDrawerPopUpMenu2
 
         private readonly SharedLayoutCoordinator example;
 
+        List<Commands> items = new List<Commands>();
+
         public UserControlHome()
         {
             InitializeComponent();
@@ -34,7 +36,7 @@ namespace NavigationDrawerPopUpMenu2
                 //this literally grabs the list of commands from the import page
                 List<Command> readCommandList = UserControlImport.commandList;
 
-                List<Commands> items = new List<Commands>();
+           
 
                 for (int i = 0; i < readCommandList.Count; i++)
                 {
@@ -44,16 +46,16 @@ namespace NavigationDrawerPopUpMenu2
 
                 }
                 CommandList.ItemsSource = items;
-
-                //CommandList.Items.Add(new Commands { Name = "First Command", Id = "DESCRIPTION" });
-                // CommandList.Items.Add(new Commands { Name = "Second Command", Id = "DESCRIPTION" });
-                // CommandList.Items.Add(new Commands { Name = "Third Command", Id = "DESCRIPTION" });
+                
             }
         }
         //Object command to test
         public class Commands
         {
-            public Command cmd { get; set; }
+            public Command cmd
+            {
+                get; set;
+            }
            
  
             public string Name { get; set; }
@@ -76,19 +78,23 @@ namespace NavigationDrawerPopUpMenu2
             {
                 ToProcess.Items.Add(selectedItems[i]);
             }
+
+          
         }
 
-        private void ListViewItem_DisplayOffests(Commands sender, MouseButtonEventArgs e)
+        private void ListViewItem_OffestList(object sender, MouseButtonEventArgs e)
         {
-            var selectedItems = ToProcess.SelectedItems;
+            Commands selectedItemsTwo = (Commands)(ToProcess.SelectedItems);
 
-            Console.WriteLine("It worked");
-
-            for (int i = 0; i < selectedItems.Count; i++)
+            List<Offset> tempOffset = selectedItemsTwo.cmd.getOffsetList();
+            for(int j = 0; j< tempOffset.Count; j++)
             {
-                
+                offsetListView.Items.Add(tempOffset.ElementAt(j));
+                    
             }
+
         }
+
 
     }
 

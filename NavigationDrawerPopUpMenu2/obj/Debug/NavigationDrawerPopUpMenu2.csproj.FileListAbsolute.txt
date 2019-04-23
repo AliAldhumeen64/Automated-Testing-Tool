@@ -237,4 +237,3 @@ P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsle.g.cs
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsle.baml
-P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csprojResolveAssemblyReference.cache
