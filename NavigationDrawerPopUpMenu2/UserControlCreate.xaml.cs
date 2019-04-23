@@ -22,6 +22,10 @@ namespace NavigationDrawerPopUpMenu2
     public partial class UserControlCreate : UserControl
     {
         private static UdpClient udp;
+        string this_Ip;
+        string system_Ip;
+        string this_Port;
+        string system_Port;
 
         public UserControlCreate()
         {
@@ -67,24 +71,25 @@ namespace NavigationDrawerPopUpMenu2
 
             else
             {
-                
                 errormessage.Text = "The system is connecting...";
-                string ip_one = textboxTextOneIP.Text;
-                string ip_two = textboxTextTwoIP.Text;
-                string port_one = textboxPortOne.Text;
-                string port_two = textboxPortTwo.Text;
+                system_Ip = textboxTextOneIP.Text;
+                this_Ip = textboxTextTwoIP.Text;
+                system_Port = textboxPortOne.Text;
+                this_Port = textboxPortTwo.Text;
+                LaunchCommandLineApp(system_Ip, this_Ip, system_Port, this_Port);
             }
 
-            LaunchCommandLineApp();
+            
         }
 
-        static void LaunchCommandLineApp()
+        static void LaunchCommandLineApp(string system_Ip, string this_Ip, string system_Port, string this_Port)
         {
             //this is connecting to the bsc itself
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.FileName = "bsc.exe";
             startInfo.WindowStyle = ProcessWindowStyle.Normal;
-            startInfo.Arguments = "127.0.0.1 42020 42021";
+            string bscSimArgs = this_Ip + " " + system_Port + " " + this_Port;
+            startInfo.Arguments = bscSimArgs;
             try
             {
 
@@ -98,9 +103,9 @@ namespace NavigationDrawerPopUpMenu2
 
 
                     //these should be read in from the create page's UI elements
-                    IPAddress serverAddr = IPAddress.Parse("127.0.0.1");
-                    IPEndPoint endPoint = new IPEndPoint(serverAddr, 42020);
-                    IPEndPoint endPoint2 = new IPEndPoint(serverAddr, 42021);
+                    IPAddress serverAddr = IPAddress.Parse(system_Ip);
+                    IPEndPoint endPoint = new IPEndPoint(serverAddr, Int32.Parse(system_Port));
+                    IPEndPoint endPoint2 = new IPEndPoint(serverAddr, Int32.Parse(this_Port));
 
                     BaseMessage bsc;
                     udp = new UdpClient(endPoint2);
@@ -132,7 +137,6 @@ namespace NavigationDrawerPopUpMenu2
                     }
 
                     exeProcess.WaitForExit();
-                    //bsc parameters: client ip
                 } // end using
             }
             catch
