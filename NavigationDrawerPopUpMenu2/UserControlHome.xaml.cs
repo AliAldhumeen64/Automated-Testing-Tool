@@ -100,7 +100,6 @@ namespace NavigationDrawerPopUpMenu2
                     for (int j = 0; j < tempOffset.Count; j++)
                     {
                         offsetListView.Items.Add(tempOffset.ElementAt(j));
-
                     }
                 }
             }

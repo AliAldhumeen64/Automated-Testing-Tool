@@ -83,9 +83,9 @@ namespace NavigationDrawerPopUpMenu2
             description = newDescription;
         }
 
-        public void setMessage(string newMessage)
+        public void setMessage(int[] messageValues)
         {
-            message = newMessage;
+            //TO-DO TO-DO TO-DO TO-DO
         }
 
         public UInt32 getMessage()
