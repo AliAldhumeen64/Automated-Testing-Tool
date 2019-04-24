@@ -6,14 +6,14 @@
              xmlns:local="clr-namespace:NavigationDrawerPopUpMenu2"
              mc:Ignorable="d" 
              
-             Width="1000" Height="500">
+             Width="1500" Height="500">
     <Grid >
-        <ListView  x:Name="CommandList" Margin="0,10,10,352">
+        <ListView  x:Name="CommandList" Margin="0,10,10,314">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
                     <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Id}"/>
-                 
+
                 </GridView>
             </ListView.View>
             <ListView.ItemContainerStyle>
@@ -24,7 +24,7 @@
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
-        <ListView  x:Name="ToProcess" Margin="0,191,478,161">
+        <ListView  x:Name="ToProcess" Margin="0,191,511,161">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
@@ -38,9 +38,12 @@
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
-        <Button Content="Done" Margin="294,429,392,39"></Button>
-        <TextBox  PreviewTextInput="NumberValidationTextBox" Margin="10,405,769,39" Foreground="Black" FontSize="25" TextAlignment="Center"></TextBox>
-        <ListView  x:Name="offsetListView" Margin="522,191,10,161">
+        <TextBlock Height="34" HorizontalAlignment="Center" Margin="265,390,1009,0" Name="LabelForBtn" Text="Enter the inputs separated by comas" VerticalAlignment="Top" Width="226" Foreground="Black" FontSize="14" TextAlignment="Center" />
+
+        <Button Content="Done" Margin="265,429,1009,39"></Button>
+
+        <TextBox  PreviewTextInput="NumberValidationTextBox" Margin="10,405,1265,39" Foreground="Black" FontSize="25" TextAlignment="Center"></TextBox>
+        <ListView  x:Name="offsetListView" Margin="494,191,6,161" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Offset Value" DisplayMemberBinding="{Binding offsetValue}"/>
@@ -48,8 +51,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-      
-        <TextBox x:Name="offsetsInput" Margin="641,405,10,39" Foreground="Black" FontSize="25" TextAlignment="Center"/>
+
+        <TextBox x:Name="offsetsInput" Margin="526,405,511,39" Foreground="Black" FontSize="25" TextAlignment="Center"/>
 
     </Grid>
 </UserControl>

@@ -118,7 +118,7 @@ namespace NavigationDrawerPopUpMenu2
 
                     List<Offset> tempCommand1Offsets = new List<Offset>();
                     Offset tempOffset1 = new Offset("0", "XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXA", "UINT", "none", "temp offset description");
-                    tempOffset1.setMessage("00000000000000000000000000000001");
+                    //tempOffset1.setMessage("00000000000000000000000000000001");
 
                     tempCommand1Offsets.Add(tempOffset1);
                     Command tempCommand1 = new Command(14, "battle short command", true, tempCommand1Offsets, "general reply", 10000000, "test description");

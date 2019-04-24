@@ -1,213 +1,11 @@
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csprojResolveAssemblyReference.cache
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.g.cs
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\App.g.cs
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.cache
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.lref
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe.config
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.pdb
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignColors.dll
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.dll
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.pdb
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.baml
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.g.resources
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.Properties.Resources.resources
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.GenerateResource.Cache
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CoreCompileInputs.cache
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.exe
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
-C:\Users\abelo\source\repos\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\App.baml
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe.config
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.pdb
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignColors.dll
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.dll
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.pdb
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.xml
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csprojResolveAssemblyReference.cache
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.g.cs
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.g.cs
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\App.g.cs
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.cache
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.lref
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\App.baml
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.baml
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.baml
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.g.resources
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.Properties.Resources.resources
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.GenerateResource.Cache
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CoreCompileInputs.cache
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.exe
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.g.cs
-D:\GIT\NavigationDrawerPopUpMenu2\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.baml
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe.config
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.pdb
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignColors.dll
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.dll
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.pdb
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.xml
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.g.cs
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.g.cs
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.g.cs
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\App.g.cs
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.cache
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.lref
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\App.baml
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.baml
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.baml
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.baml
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.g.resources
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.Properties.Resources.resources
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.GenerateResource.cache
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CoreCompileInputs.cache
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CopyComplete
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.exe
-X:\Downloads\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe.config
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.pdb
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignColors.dll
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.dll
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.pdb
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.xml
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.g.cs
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.g.cs
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.g.cs
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\App.g.cs
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.cache
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.lref
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\App.baml
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.baml
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.baml
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.baml
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.g.resources
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.Properties.Resources.resources
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.GenerateResource.cache
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CoreCompileInputs.cache
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CopyComplete
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.exe
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\NavigationDrawer-master\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe.config
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.pdb
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignColors.dll
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.dll
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.pdb
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.xml
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csprojResolveAssemblyReference.cache
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.g.cs
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.g.cs
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.g.cs
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\App.g.cs
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.cache
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.lref
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\App.baml
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.baml
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.baml
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.baml
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.g.resources
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.Properties.Resources.resources
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.GenerateResource.cache
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CoreCompileInputs.cache
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CopyComplete
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.exe
-\\udrive.win.psu.edu\Users\a\s\asa5399\Desktop\GUI\GUI\NavigationDrawer-master\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe.config
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.pdb
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignColors.dll
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.dll
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.pdb
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.xml
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csprojResolveAssemblyReference.cache
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.g.cs
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.g.cs
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.g.cs
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\App.g.cs
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.cache
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.lref
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\App.baml
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.baml
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.baml
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.baml
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.g.resources
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.Properties.Resources.resources
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.GenerateResource.cache
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CoreCompileInputs.cache
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CopyComplete
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.exe
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.g.cs
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.baml
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\Xceed.Words.NET.dll
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\NavigationDrawerPopUpMenu2.exe.config
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\NavigationDrawerPopUpMenu2.exe
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\NavigationDrawerPopUpMenu2.pdb
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\MaterialDesignColors.dll
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\MaterialDesignThemes.Wpf.dll
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\Xceed.Words.NET.dll
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\MaterialDesignThemes.Wpf.pdb
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\test\MaterialDesignThemes.Wpf.xml
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe.config
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.pdb
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignColors.dll
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.dll
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\Xceed.Words.NET.dll
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.pdb
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.xml
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.g.cs
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.g.cs
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.g.cs
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.g.cs
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\App.g.cs
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.cache
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.lref
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\App.baml
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.baml
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.baml
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.baml
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.baml
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.g.resources
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.Properties.Resources.resources
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.GenerateResource.cache
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CoreCompileInputs.cache
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CopyComplete
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.exe
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe.config
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.pdb
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignColors.dll
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.dll
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\Xceed.Words.NET.dll
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.pdb
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csprojAssemblyReference.cache
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.g.cs
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.g.cs
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.g.cs
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.g.cs
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\App.g.cs
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.cache
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.lref
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\App.baml
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.baml
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.baml
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.baml
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.baml
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.g.resources
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.Properties.Resources.resources
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.GenerateResource.cache
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CoreCompileInputs.cache
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CopyComplete
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.exe
-C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\GeneratedInternalTypeHelper.g.cs
-P:\Private\Final Project\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csprojResolveAssemblyReference.cache
+P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.g.cs
+P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsle.g.cs
+P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.g.cs
+P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.g.cs
+P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.g.cs
+P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\App.g.cs
+P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.cache
+P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.lref
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe.config
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.exe
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\NavigationDrawerPopUpMenu2.pdb
@@ -216,15 +14,9 @@ P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\Xceed.Words.NET.dll
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.pdb
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.xml
-P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.g.cs
-P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.g.cs
-P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.g.cs
-P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.g.cs
-P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\App.g.cs
-P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.cache
-P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.lref
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\App.baml
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.baml
+P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsle.baml
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.baml
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.baml
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.baml
@@ -235,11 +27,3 @@ P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CopyComplete
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.exe
 P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.pdb
-P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsle.g.cs
-P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsle.baml
-<<<<<<< Updated upstream
-=======
-P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csprojResolveAssemblyReference.cache
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsle.g.cs
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsle.baml
->>>>>>> Stashed changes
