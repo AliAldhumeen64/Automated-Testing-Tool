@@ -100,7 +100,15 @@ namespace NavigationDrawerPopUpMenu2
             char currentLetter;
             bool isNewLetter;
 
+            //getting rid of all the useless whitespace in the mask
             string trueMask = mask.Trim(' ');
+            trueMask = trueMask.Trim('\n');
+            string[] truemaskarray = trueMask.Split(' ');
+            trueMask = "";
+            for(int n = 0; n < truemaskarray.Length; n++)
+            {
+                trueMask += truemaskarray[n].Trim(' ');
+            }
             //look through whole mask for parameters
             for (int i = 0; i < trueMask.Length; i++)
             {
@@ -141,6 +149,8 @@ namespace NavigationDrawerPopUpMenu2
                 }
                 
             }
+
+            message = newMessage;
         }
 
         public void setMessage(string newMessage)

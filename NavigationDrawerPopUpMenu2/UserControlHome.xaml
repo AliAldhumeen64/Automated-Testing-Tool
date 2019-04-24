@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:NavigationDrawerPopUpMenu2"
              mc:Ignorable="d" 
              
-             Width="1500" Height="500">
+             Width="1022.408" Height="500">
     <Grid >
-        <ListView  x:Name="CommandList" Margin="0,10,10,314">
+        <ListView  x:Name="CommandList" Margin="0,10,10,324">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
@@ -19,12 +19,11 @@
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <EventSetter Event="PreviewMouseLeftButtonDown" Handler="ListViewItem_PreviewMouseLeftButtonDown" />
-                    <EventSetter Event="PreviewMouseLeftButtonDown" Handler="ListViewItem_OffestList" />
 
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
-        <ListView  x:Name="ToProcess" Margin="0,153,478,173">
+        <ListView  x:Name="ToProcess" Margin="0,203,681,95">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
@@ -38,9 +37,9 @@
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
-        <Button x:Name="finishOneOffset" Content="Enter" Margin="294,429,392,39" Click="OnClick"></Button>
-        <TextBox  PreviewTextInput="NumberValidationTextBox" Margin="10,405,769,39" Foreground="Black" FontSize="25" TextAlignment="Center"></TextBox>
-        <ListView  x:Name="offsetListView" Margin="522,153,10,95">
+        <Button x:Name="finishOneOffset" Content="Enter" Margin="188,429,639,39" Click="OnClick"></Button>
+        
+        <ListView  x:Name="offsetListView" Margin="384,203,27,95" FontSize="12">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Offset Value" DisplayMemberBinding="{Binding offsetValue}"/>
@@ -50,9 +49,8 @@
             </ListView.View>
         </ListView>
 
-        <TextBox x:Name="offsetsInput" Margin="641,405,10,39" Foreground="Black" FontSize="25" TextAlignment="Center"/>
+        <TextBox x:Name="offsetsInput" Margin="509,405,142,39" Foreground="Black" FontSize="25" TextAlignment="Center"/>
 
-        <TextBox x:Name="offsetsInput" Margin="526,405,511,39" Foreground="Black" FontSize="25" TextAlignment="Center"/>
 
     </Grid>
 </UserControl>

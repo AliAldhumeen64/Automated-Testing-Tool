@@ -75,7 +75,7 @@ namespace NavigationDrawerPopUpMenu2
 
             else
             {
-                errormessage.Text = "The system is connecting...";
+                errormessage.Text = "The system sent the queue";
                 system_Ip = textboxTextOneIP.Text;
                 this_Ip = textboxTextTwoIP.Text;
                 system_Port = textboxPortOne.Text;
@@ -83,7 +83,7 @@ namespace NavigationDrawerPopUpMenu2
                 LaunchCommandLineApp(system_Ip, this_Ip, system_Port, this_Port);
             }
 
-            
+
         }
 
         static void LaunchCommandLineApp(string system_Ip, string this_Ip, string system_Port, string this_Port)
@@ -115,25 +115,28 @@ namespace NavigationDrawerPopUpMenu2
                     udp = new UdpClient(endPoint2);
 
                     //this should read in the list of commands in the queue of commands to be run
-                    
 
 
-                    List<Offset> tempCommand1Offsets = new List<Offset>();
-                    Offset tempOffset1 = new Offset("0", "XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXA", "UINT", "none", "temp offset description");
+
+                    //List<Offset> tempCommand1Offsets = new List<Offset>();
+                    //Offset tempOffset1 = new Offset("0", "XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXA", "UINT", "none", "temp offset description");
                     //tempOffset1.setMessage("00000000000000000000000000000001");
 
-                    tempCommand1Offsets.Add(tempOffset1);
-                    Command tempCommand1 = new Command(14, "battle short command", true, tempCommand1Offsets, "general reply", 10000000, "test description");
-                    commandQueue.Add(tempCommand1);
-
-                    
+                    //tempCommand1Offsets.Add(tempOffset1);
+                    //Command tempCommand1 = new Command(14, "battle short command", true, tempCommand1Offsets, "general reply", 10000000, "test description");
+                    //commandQueue.Add(tempCommand1);
 
 
+
+                    commandIndex = 0;
                     for (int i = 0; i < commandQueue.Count; i++)
                     {
                         bsc = new BaseMessage(commandQueue.ElementAt(i));
-                        udp.Send(bsc.GetByteArray(commandQueue.ElementAt(i)), bsc.GetByteArray(commandQueue.ElementAt(i)).Length, endPoint);
-                        System.Console.WriteLine("Sent Message successfully.");
+                        byte[] message = bsc.GetByteArray(commandQueue.ElementAt(i));
+                        udp.Send(message, message.Length, endPoint);
+                        Console.WriteLine("Sent Message successfully.");
+                        UserControlConsole.dc.ConsoleInput = ("Sent Message successfully.");
+                        UserControlConsole.dc.RunCommand();
                         udp.BeginReceive(new AsyncCallback(DataReceived), new object());
 
                     }
@@ -143,29 +146,32 @@ namespace NavigationDrawerPopUpMenu2
             }
             catch
             {
-                System.Console.WriteLine("Error in starting file process.");
+                Console.WriteLine("Error in starting file process.");
             } // end try-catch
 
         } // end LaunchCommandLineApp()
 
         private static void DataReceived(IAsyncResult ar)
         {
-            System.Console.WriteLine("Waiting to receive...");
+            Console.WriteLine("Waiting to receive...");
             IPAddress serverAddr = IPAddress.Parse(system_Ip);
             IPEndPoint ip = new IPEndPoint(serverAddr, Int32.Parse(system_Port));
             byte[] bytes = udp.EndReceive(ar, ref ip);
-            for(int j=0; j < bytes.Length; j++)
+            UInt32[] replyValues = new uint[bytes.Length];
+            
+            for(int j=0; j < bytes.Length-3; j++)
             {
                 //This is where we would compare the returned values to the expected values in the read in document
-                System.Console.WriteLine(bytes[j]);
+                replyValues[j] = BitConverter.ToUInt32(bytes, j);
+                Console.WriteLine(replyValues[j]);
+                UserControlConsole.dc.ConsoleInput = replyValues[j].ToString();
+                UserControlConsole.dc.RunCommand();
             }
-            //int offsetCount = bytes.Length / 4;
-            BaseMessage thisReply = new BaseMessage(bytes);
 
-        }
 
-        private static void compareCommand(Command reply, BaseMessage response)
-        {
+            //this is where we'd properly parse the message
+            Command thisReply = commandQueue.ElementAt(commandIndex);
+            BaseMessage thisMessage = new BaseMessage(bytes, thisReply);
 
         }
 

@@ -24,7 +24,7 @@ namespace NavigationDrawerPopUpMenu2
 
     public partial class UserControlConsole : UserControl
     {
-        ConsoleContent dc = new ConsoleContent();
+        public static ConsoleContent dc = new ConsoleContent();
 
         public UserControlConsole()
         {
@@ -53,10 +53,11 @@ namespace NavigationDrawerPopUpMenu2
         }
     }
 
-    public class ConsoleContent : INotifyPropertyChanged
+    public class ConsoleContent
     {
-        string consoleInput = string.Empty;
-        ObservableCollection<string> consoleOutput = new ObservableCollection<string>() { "Northrop Grumman..." };
+        static string consoleInput = string.Empty;
+        static List<string> consoleOutput = new List<string>() { "Starting console." };
+
 
         public string ConsoleInput
         {
@@ -67,11 +68,10 @@ namespace NavigationDrawerPopUpMenu2
             set
             {
                 consoleInput = value;
-                OnPropertyChanged("ConsoleInput");
             }
         }
 
-        public ObservableCollection<string> ConsoleOutput
+        public List<string> ConsoleOutput
         {
             get
             {
@@ -80,7 +80,6 @@ namespace NavigationDrawerPopUpMenu2
             set
             {
                 consoleOutput = value;
-                OnPropertyChanged("ConsoleOutput");
             }
         }
 
@@ -88,15 +87,10 @@ namespace NavigationDrawerPopUpMenu2
         {
             ConsoleOutput.Add(ConsoleInput);
             // do your stuff here.
+            //no
             ConsoleInput = String.Empty;
         }
 
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        void OnPropertyChanged(string propertyName)
-        {
-            if (null != PropertyChanged)
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }

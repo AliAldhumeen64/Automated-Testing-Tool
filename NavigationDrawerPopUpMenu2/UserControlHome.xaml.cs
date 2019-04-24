@@ -146,8 +146,6 @@ namespace NavigationDrawerPopUpMenu2
             
             
         }
-
-
     }
 
 }

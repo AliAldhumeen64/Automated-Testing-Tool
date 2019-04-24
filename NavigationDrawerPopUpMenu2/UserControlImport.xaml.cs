@@ -209,7 +209,7 @@ namespace NavigationDrawerPopUpMenu2
                         commandReplyName = "None";
                         commandReplyValue = 0;
                     }
-                    commandPayloadType = Convert.ToUInt32(paraList.ElementAt(i + 3).Text);
+                    commandPayloadType = Convert.ToUInt32((paraList.ElementAt(i + 3).Text),2);
 
                     //should never actually be null
                     Xceed.Words.NET.Table testTable = null;
