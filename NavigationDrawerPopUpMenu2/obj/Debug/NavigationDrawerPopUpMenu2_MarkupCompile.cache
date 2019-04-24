@@ -4,16 +4,28 @@
 winexe
 C#
 .cs
+<<<<<<< Updated upstream
 C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\
+=======
+P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\
+>>>>>>> Stashed changes
 NavigationDrawerPopUpMenu2
 none
 false
 DEBUG;TRACE
+<<<<<<< Updated upstream
 C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\App.xaml
 5-171687140
 
 18-93199382
 16-519503679
+=======
+P:\Private\New folder (2)\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\App.xaml
+5-171687140
+
+18-1104188679
+16218704015
+>>>>>>> Stashed changes
 MainWindow.xaml;UserControlConsle.xaml;UserControlImport.xaml;UserControlCreate.xaml;UserControlHome.xaml;
 
 True

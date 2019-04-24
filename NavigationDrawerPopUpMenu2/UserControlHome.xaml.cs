@@ -85,6 +85,7 @@ namespace NavigationDrawerPopUpMenu2
         private void ListViewItem_OffestList(object sender, MouseButtonEventArgs e)
         {
             Commands test = new Commands();
+
             if(ToProcess.SelectedItem != null)
             {
                 if (ToProcess.SelectedItem.GetType().Equals(test.GetType()))
@@ -106,6 +107,10 @@ namespace NavigationDrawerPopUpMenu2
             
         }
 
+        public int[] ToIntArray(string value, char separator)
+        {
+            return Array.ConvertAll(value.Split(separator), s => int.Parse(s));
+        }
 
     }
 
