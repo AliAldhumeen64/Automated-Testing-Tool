@@ -72,37 +72,78 @@ namespace NavigationDrawerPopUpMenu2
 
         private void ListViewItem_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            var selectedItems = CommandList.SelectedItems;
+            Commands test = new Commands();
 
-            for (int i = 0; i < selectedItems.Count; i++)
+            Commands selectedItem;
+
+            if (CommandList.SelectedItem != null)
             {
-                ToProcess.Items.Add(selectedItems[i]);
+                if (CommandList.SelectedItem.GetType().Equals(test.GetType()))
+                {
+                    selectedItem = (Commands)(CommandList.SelectedItem);
+                    ToProcess.Items.Add(selectedItem);
+                    UserControlCreate.commandQueue.Add(selectedItem.cmd);
+                    UserControlCreate.commandIndex++;
+                }
             }
-
           
         }
 
         private void ListViewItem_OffestList(object sender, MouseButtonEventArgs e)
         {
             Commands test = new Commands();
+
+            Command actualCommand;
+
             if(ToProcess.SelectedItem != null)
             {
                 if (ToProcess.SelectedItem.GetType().Equals(test.GetType()))
                 {
                     Commands selectedItemsTwo = (Commands)(ToProcess.SelectedItem);
+                    actualCommand = selectedItemsTwo.cmd;
 
                     for(int i = offsetListView.Items.Count-1; i >= 0; i--)
                     {
                         offsetListView.Items.RemoveAt(i);
                     }
 
-                    List<Offset> tempOffset = selectedItemsTwo.cmd.getOffsetList();
-                    for (int j = 0; j < tempOffset.Count; j++)
+                    List<Offset> tempOffsetList = selectedItemsTwo.cmd.getOffsetList();
+                    for (int j = 0; j < tempOffsetList.Count; j++)
                     {
-                        offsetListView.Items.Add(tempOffset.ElementAt(j));
+                        offsetListView.Items.Add(tempOffsetList.ElementAt(j));
+                    }
+                    UserControlCreate.offsetIndex = 0;
+                }
+            }
+            
+        }
+
+        public string[] ToStringArray(string value, char separator)
+        {
+            return value.Split(',');
+        }
+
+        private void OnClick(object sender, RoutedEventArgs e)
+        {
+            if(offsetsInput.Text != "")
+            {
+                string text = offsetsInput.Text.Trim();
+                string[] inputs = ToStringArray(text, ',');
+                offsetsInput.Text = "";
+                if (UserControlCreate.commandQueue.Count > 0)
+                {
+                    Command current = UserControlCreate.commandQueue.ElementAt(UserControlCreate.commandIndex);
+                    List<Offset> offsetList = current.getOffsetList();
+                    int maxIndexNum = current.getOffsetList().Count;
+
+                    if (UserControlCreate.offsetIndex < maxIndexNum)
+                    {
+                        offsetList.ElementAt(UserControlCreate.offsetIndex).setMessage(inputs);
+                        UserControlCreate.offsetIndex++;
                     }
                 }
             }
+            
             
         }
 

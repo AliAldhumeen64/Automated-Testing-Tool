@@ -13,7 +13,7 @@
                 <GridView>
                     <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
                     <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Id}"/>
-                 
+
                 </GridView>
             </ListView.View>
             <ListView.ItemContainerStyle>
@@ -24,7 +24,7 @@
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
-        <ListView  x:Name="ToProcess" Margin="0,191,478,161">
+        <ListView  x:Name="ToProcess" Margin="0,153,478,173">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
@@ -38,17 +38,18 @@
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
-        <Button Content="Done" Margin="294,429,392,39"></Button>
+        <Button x:Name="finishOneOffset" Content="Enter" Margin="294,429,392,39" Click="OnClick"></Button>
         <TextBox  PreviewTextInput="NumberValidationTextBox" Margin="10,405,769,39" Foreground="Black" FontSize="25" TextAlignment="Center"></TextBox>
-        <ListView  x:Name="offsetListView" Margin="522,191,10,161">
+        <ListView  x:Name="offsetListView" Margin="522,153,10,95">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Offset Value" DisplayMemberBinding="{Binding offsetValue}"/>
+                    <GridViewColumn Header="Mask" DisplayMemberBinding="{Binding mask}"/>
                     <GridViewColumn Header="Description" DisplayMemberBinding="{Binding description}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-      
+
         <TextBox x:Name="offsetsInput" Margin="641,405,10,39" Foreground="Black" FontSize="25" TextAlignment="Center"/>
 
     </Grid>

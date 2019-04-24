@@ -11,7 +11,7 @@ namespace NavigationDrawerPopUpMenu2
     public class Offset
     {
         public string offsetValue { get; set; }
-        private string mask;
+        public string mask { get; set; }
         private string type;
         private string units;
         public string description { get; set; }
@@ -25,7 +25,7 @@ namespace NavigationDrawerPopUpMenu2
             type = "";
             units = "";
             description = "";
-            parameterCount = -1;
+            parameterCount = 0;
         }
 
         public Offset(string newOffsetValue, string newMask, string newType, string newUnits, string newDescription)
@@ -35,7 +35,7 @@ namespace NavigationDrawerPopUpMenu2
             type = newType;
             units = newUnits;
             description = newDescription;
-            parameterCount = -1;
+            parameterCount = 0;
         }
 
         public string getOffsetValue()
@@ -56,7 +56,7 @@ namespace NavigationDrawerPopUpMenu2
         {
             mask = newMask;
             //because the mask is changed, we have to find the parameter count again
-            parameterCount = -1;
+            parameterCount = 0;
         }
         public string getType()
         {
@@ -83,9 +83,69 @@ namespace NavigationDrawerPopUpMenu2
             description = newDescription;
         }
 
-        public void setMessage(int[] messageValues)
+        //
+        //This function sets the actual message for an offset
+        //pretty much needed
+        //the parameters are always Letters where the first one is 'A', then 'B', then 'C', etc.
+        //Use the int value this function to returns to know how many letters to worry about
+        //
+        public void setMessage(string[] messageValues)
         {
+            string newMessage = "";
             //TO-DO TO-DO TO-DO TO-DO
+
+            List<char> seenLetters = new List<char>();
+            List<int> seenLettersStartIndexes = new List<int>();
+            List<int> seenLettersEndIndexes = new List<int>();
+            char currentLetter;
+            bool isNewLetter;
+
+            string trueMask = mask.Trim(' ');
+            //look through whole mask for parameters
+            for (int i = 0; i < trueMask.Length; i++)
+            {
+                currentLetter = trueMask.ElementAt(i);
+                //ignore Xs in the mask
+                if((currentLetter != ' ') && (currentLetter != '\n'))
+                {
+                    if ((currentLetter != 'X'))
+                    {
+                        isNewLetter = true;
+                        //search through seenLetters if the currentLetter being looked at has shown up before, it isnt a new parameter and the count shouldnt be incremented
+                        for (int j = 0; j < seenLetters.Count; j++)
+                        {
+                            if (seenLetters.ElementAt(j) == currentLetter)
+                            {
+                                isNewLetter = false;
+                                seenLettersEndIndexes[j] = i;
+                                newMessage = newMessage + messageValues[j].Substring(seenLettersEndIndexes[j] - seenLettersStartIndexes[j], 1);
+                            }
+
+                        }
+
+                        //if it is a new letter, add it to the list and increase the parameter count
+                        if (isNewLetter)
+                        {
+                            string text = messageValues[parameterCount];
+                            newMessage = newMessage + text.Substring(0, 1);
+                            seenLetters.Add(currentLetter);
+                            seenLettersStartIndexes.Add(i);
+                            seenLettersEndIndexes.Add(i);
+                            parameterCount++;
+                        }
+                    }
+                    else
+                    {
+                        newMessage = newMessage + '0';
+                    }
+                }
+                
+            }
+        }
+
+        public void setMessage(string newMessage)
+        {
+            message = newMessage;
         }
 
         public UInt32 getMessage()
@@ -106,48 +166,7 @@ namespace NavigationDrawerPopUpMenu2
             return trueMessage;
         }
 
-        //
-        //This function returns the number of parameters for an offset
-        //pretty much needed
-        //the parameters are always Letters where the first one is 'A', then 'B', then 'C', etc.
-        //Use the int value this function to returns to know how many letters to worry about
-        //
-        public int getParameterCount()
-        {
-            //parameterCount is -1 if it hasnt been found before
-            if (parameterCount == -1)
-            {
-                List<char> seenLetters = new List<char>();
-                char currentLetter;
-                bool isNewLetter;
-
-                //look through whole mask for parameters
-                for (int i = 0; i < mask.Length; i++)
-                {
-                    currentLetter = mask.ElementAt(i);
-                    //ignore Xs in the mask
-                    if (currentLetter != 'X')
-                    {
-                        isNewLetter = true;
-                        //search through seenLetters if the currentLetter being looked at has shown up before, it isnt a new parameter and the count shouldnt be incremented
-                        for (int j = 0; j < seenLetters.Count; j++)
-                        {
-                            if (seenLetters.ElementAt(j) == currentLetter)
-                                isNewLetter = false;
-                        }
-
-                        //if it is a new letter, add it to the list and increase the parameter count
-                        if (isNewLetter)
-                        {
-                            seenLetters.Add(currentLetter);
-                            parameterCount++;
-                        }
-                    }
-                }
-            }
-
-            return parameterCount;
-        }
+        
             
     }
 }

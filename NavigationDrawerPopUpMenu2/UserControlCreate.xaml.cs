@@ -27,7 +27,9 @@ namespace NavigationDrawerPopUpMenu2
         private static string this_Port;
         private static string system_Port;
         private static List<BaseMessage> replies = new List<BaseMessage>();
-        private static List<Command> commandQueue = new List<Command>();
+        public static List<Command> commandQueue = new List<Command>();
+        public static int commandIndex = -1;
+        public static int offsetIndex = -1;
 
         public UserControlCreate()
         {
