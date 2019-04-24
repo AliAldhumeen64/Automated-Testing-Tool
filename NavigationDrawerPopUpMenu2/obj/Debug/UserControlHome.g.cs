@@ -67,6 +67,14 @@ namespace NavigationDrawerPopUpMenu2 {
         
         #line 43 "..\..\UserControlHome.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.TextBlock LabelForBtn;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 46 "..\..\UserControlHome.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListView offsetListView;
         
         #line default

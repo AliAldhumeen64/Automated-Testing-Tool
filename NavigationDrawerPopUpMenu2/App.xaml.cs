@@ -8,8 +8,7 @@ using System.Windows;
 
 namespace NavigationDrawerPopUpMenu2
 {
-    /// <summary>
-    /// </summary>
+ 
     public partial class App : Application
     {
     }

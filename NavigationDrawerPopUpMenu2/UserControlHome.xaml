@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:NavigationDrawerPopUpMenu2"
              mc:Ignorable="d" 
              
-             Width="1000" Height="500">
+             Width="1500" Height="500">
     <Grid >
-        <ListView  x:Name="CommandList" Margin="0,10,10,352">
+        <ListView  x:Name="CommandList" Margin="0,10,10,314">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
@@ -51,6 +51,8 @@
         </ListView>
 
         <TextBox x:Name="offsetsInput" Margin="641,405,10,39" Foreground="Black" FontSize="25" TextAlignment="Center"/>
+
+        <TextBox x:Name="offsetsInput" Margin="526,405,511,39" Foreground="Black" FontSize="25" TextAlignment="Center"/>
 
     </Grid>
 </UserControl>
