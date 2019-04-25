@@ -26,6 +26,7 @@ namespace NavigationDrawerPopUpMenu2
         private readonly SharedLayoutCoordinator example;
 
         List<Commands> items = new List<Commands>();
+        private Commands lastCommandEntered;
 
         public UserControlHome()
         {
@@ -76,14 +77,16 @@ namespace NavigationDrawerPopUpMenu2
 
             Commands selectedItem;
 
-            if (CommandList.SelectedItem != null)
+            if ((CommandList.SelectedItem != null))
             {
                 if (CommandList.SelectedItem.GetType().Equals(test.GetType()))
                 {
                     selectedItem = (Commands)(CommandList.SelectedItem);
+                    lastCommandEntered = selectedItem;
                     ToProcess.Items.Add(selectedItem);
                     UserControlCreate.commandQueue.Add(selectedItem.cmd);
                     UserControlCreate.commandIndex++;
+                    CommandList.UnselectAll();
                 }
             }
           

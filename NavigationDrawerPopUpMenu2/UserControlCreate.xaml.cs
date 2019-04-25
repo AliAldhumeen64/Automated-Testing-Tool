@@ -129,19 +129,44 @@ namespace NavigationDrawerPopUpMenu2
 
 
                     commandIndex = 0;
-                    for (int i = 0; i < commandQueue.Count; i++)
+                    for (int i=0; i < commandQueue.Count; i++)
                     {
-                        bsc = new BaseMessage(commandQueue.ElementAt(i));
-                        byte[] message = bsc.GetByteArray(commandQueue.ElementAt(i));
+                        bool skip = false;
+                        Command next = commandQueue.ElementAt(i);
+                        List<Offset> currentoffsetlist = next.getOffsetList();
+                        for (int j =0; j < currentoffsetlist.Count; j++)
+                        {
+                            if(currentoffsetlist[j].getMessage() == 0)
+                            {
+                                //this command was unfinished because this offset had a message that was too short, so we skip it outright
+                                UserControlConsole.dc.ConsoleInput = ("ERROR: Command unfinished, " + next.getPayloadName() + " skipped");
+                                UserControlConsole.dc.RunCommand();
+
+                                skip = true;
+                                break;
+                            }
+                        }
+                        if (skip)
+                        {
+                            commandIndex++;
+                            continue;
+                        }
+                        bsc = new BaseMessage(next);
+                        byte[] message = bsc.GetByteArray(next);
                         udp.Send(message, message.Length, endPoint);
                         Console.WriteLine("Sent Message successfully.");
                         UserControlConsole.dc.ConsoleInput = ("Sent Message successfully.");
                         UserControlConsole.dc.RunCommand();
                         udp.BeginReceive(new AsyncCallback(DataReceived), new object());
-
                     }
 
                     exeProcess.WaitForExit();
+
+                    while(commandQueue.Count > 0)
+                    {
+                        commandQueue.RemoveAt(0);
+                    }
+
                 } // end using
             }
             catch
@@ -157,21 +182,34 @@ namespace NavigationDrawerPopUpMenu2
             IPAddress serverAddr = IPAddress.Parse(system_Ip);
             IPEndPoint ip = new IPEndPoint(serverAddr, Int32.Parse(system_Port));
             byte[] bytes = udp.EndReceive(ar, ref ip);
-            UInt32[] replyValues = new uint[bytes.Length];
-            
-            for(int j=0; j < bytes.Length-3; j++)
+            UInt32[] replyValues = new uint[(bytes.Length/4)];
+
+            int j = 0;
+
+            for(int i=0; i < bytes.Length / 4; i++)
             {
                 //This is where we would compare the returned values to the expected values in the read in document
-                replyValues[j] = BitConverter.ToUInt32(bytes, j);
-                Console.WriteLine(replyValues[j]);
-                UserControlConsole.dc.ConsoleInput = replyValues[j].ToString();
+                replyValues[i] = BitConverter.ToUInt32(bytes, j);
+                Console.WriteLine(replyValues[i]);
+                UserControlConsole.dc.ConsoleInput = replyValues[i].ToString();
+                UserControlConsole.dc.RunCommand();
+                j += 4;
+            }
+            if(replyValues[replyValues.Length-1] == 1)
+            {
+                UserControlConsole.dc.ConsoleInput = "System replied with a successful " + commandQueue.ElementAt(commandIndex).getReplyName() + ". The command executed correctly.";
+                UserControlConsole.dc.RunCommand();
+            }
+            else if (replyValues[replyValues.Length-1] == 0)
+            {
+                UserControlConsole.dc.ConsoleInput = "System replied with a failed " + commandQueue.ElementAt(commandIndex).getReplyName() + ". The command did not execute correctly.";
                 UserControlConsole.dc.RunCommand();
             }
 
-
             //this is where we'd properly parse the message
-            Command thisReply = commandQueue.ElementAt(commandIndex);
-            BaseMessage thisMessage = new BaseMessage(bytes, thisReply);
+            //Command thisReply = commandQueue.ElementAt(commandIndex);
+            //BaseMessage thisMessage = new BaseMessage(bytes, thisReply);
+
 
         }
 

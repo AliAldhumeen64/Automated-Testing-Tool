@@ -26,6 +26,7 @@ namespace NavigationDrawerPopUpMenu2
             units = "";
             description = "";
             parameterCount = 0;
+            message = "0";
         }
 
         public Offset(string newOffsetValue, string newMask, string newType, string newUnits, string newDescription)
@@ -36,6 +37,7 @@ namespace NavigationDrawerPopUpMenu2
             units = newUnits;
             description = newDescription;
             parameterCount = 0;
+            message = "0";
         }
 
         public string getOffsetValue()
@@ -99,6 +101,7 @@ namespace NavigationDrawerPopUpMenu2
             List<int> seenLettersEndIndexes = new List<int>();
             char currentLetter;
             bool isNewLetter;
+            int charsleft;
 
             //getting rid of all the useless whitespace in the mask
             string trueMask = mask.Trim(' ');
@@ -122,11 +125,25 @@ namespace NavigationDrawerPopUpMenu2
                         //search through seenLetters if the currentLetter being looked at has shown up before, it isnt a new parameter and the count shouldnt be incremented
                         for (int j = 0; j < seenLetters.Count; j++)
                         {
-                            if (seenLetters.ElementAt(j) == currentLetter)
+                            charsleft = seenLettersEndIndexes[j] - seenLettersStartIndexes[j];
+                            if ((seenLetters.ElementAt(j) == currentLetter))
                             {
-                                isNewLetter = false;
-                                seenLettersEndIndexes[j] = i;
-                                newMessage = newMessage + messageValues[j].Substring(seenLettersEndIndexes[j] - seenLettersStartIndexes[j], 1);
+                                if((messageValues[j].Length < charsleft))
+                                {
+                                    newMessage = newMessage + "0";
+                                    seenLettersStartIndexes[j]--;
+                                }
+                                else if((messageValues[j].Length == charsleft))
+                                {
+                                    isNewLetter = false;
+                                    seenLettersEndIndexes[j] = i;
+                                    newMessage = newMessage + messageValues[j].Substring(seenLettersEndIndexes[j] - seenLettersStartIndexes[j], 1);
+                                }
+                                else
+                                {
+                                    messageValues[j] = messageValues[j].Substring(1);
+                                }
+                                
                             }
 
                         }
