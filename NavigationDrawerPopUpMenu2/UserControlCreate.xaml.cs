@@ -22,19 +22,19 @@ namespace NavigationDrawerPopUpMenu2
     public partial class UserControlCreate : UserControl
     {
         private static UdpClient udp;
-        private static string this_Ip;
-        private static string system_Ip;
-        private static string this_Port;
-        private static string system_Port;
+        private static string this_Ip ="";
+        private static string system_Ip = "";
+        private static string this_Port = "";
+        private static string system_Port = "";
         private static List<BaseMessage> replies = new List<BaseMessage>();
         public static List<Command> commandQueue = new List<Command>();
         public static int commandIndex = -1;
         public static int offsetIndex = -1;
+        private static bool hasConnection = false;
 
         public UserControlCreate()
         {
             InitializeComponent();
-          
         }
         public void Reset()
         {
@@ -43,12 +43,14 @@ namespace NavigationDrawerPopUpMenu2
             textboxPortOne.Text = "";
             textboxPortTwo.Text = "";
             errormessage.Text = "";
-
+            udp.Close();
+            hasConnection = false;
 
         }
         private void buttonReset_Click(object sender, RoutedEventArgs e)
         {
             Reset();
+            
         }
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
@@ -101,10 +103,6 @@ namespace NavigationDrawerPopUpMenu2
                 {
                     
                     System.Threading.Thread.Sleep(1000);
-                    Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-                    sock.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
-                    sock.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ExclusiveAddressUse, false);
-
 
                     //these should be read in from the create page's UI elements
                     IPAddress serverAddr = IPAddress.Parse(system_Ip);
@@ -112,11 +110,16 @@ namespace NavigationDrawerPopUpMenu2
                     IPEndPoint endPoint2 = new IPEndPoint(serverAddr, Int32.Parse(this_Port));
 
                     BaseMessage bsc;
-                    udp = new UdpClient(endPoint2);
+                    if (!hasConnection)
+                    {
+                        Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+                        sock.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+                        sock.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ExclusiveAddressUse, false);
+                        udp = new UdpClient(endPoint2);
+                        hasConnection = true;
+                    }
 
-                    //this should read in the list of commands in the queue of commands to be run
-
-
+                    //for debugging
 
                     //List<Offset> tempCommand1Offsets = new List<Offset>();
                     //Offset tempOffset1 = new Offset("0", "XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXA", "UINT", "none", "temp offset description");
@@ -165,8 +168,8 @@ namespace NavigationDrawerPopUpMenu2
                     while(commandQueue.Count > 0)
                     {
                         commandQueue.RemoveAt(0);
+                        commandIndex--;
                     }
-
                 } // end using
             }
             catch
@@ -186,7 +189,18 @@ namespace NavigationDrawerPopUpMenu2
 
             int j = 0;
 
-            for(int i=0; i < bytes.Length / 4; i++)
+            UserControlConsole.dc.ConsoleInput = "Reply name: " + commandQueue.ElementAt(commandIndex).getReplyName();
+            UserControlConsole.dc.RunCommand();
+
+            UserControlConsole.dc.ConsoleInput = "Reply description: " + commandQueue.ElementAt(commandIndex).getDescription();
+            UserControlConsole.dc.RunCommand();
+
+            UserControlConsole.dc.ConsoleInput = "Returned Payload & header values: ";
+            UserControlConsole.dc.RunCommand();
+
+            List<Offset> tempOffsets = commandQueue.ElementAt(commandIndex).getOffsetList();
+
+            for (int i=0; i < bytes.Length / 4; i++)
             {
                 //This is where we would compare the returned values to the expected values in the read in document
                 replyValues[i] = BitConverter.ToUInt32(bytes, j);
@@ -195,16 +209,32 @@ namespace NavigationDrawerPopUpMenu2
                 UserControlConsole.dc.RunCommand();
                 j += 4;
             }
-            if(replyValues[replyValues.Length-1] == 1)
+
+            UserControlConsole.dc.ConsoleInput = "Descriptions for individual return values from the reply: ";
+            UserControlConsole.dc.RunCommand();
+
+            for (int k=0; k < tempOffsets.Count; k++)
             {
-                UserControlConsole.dc.ConsoleInput = "System replied with a successful " + commandQueue.ElementAt(commandIndex).getReplyName() + ". The command executed correctly.";
+                UserControlConsole.dc.ConsoleInput = "Offset #: " + tempOffsets.ElementAt(k).getOffsetValue();
+                UserControlConsole.dc.RunCommand();
+                UserControlConsole.dc.ConsoleInput = "Offset description: " + tempOffsets.ElementAt(k).getDescription();
                 UserControlConsole.dc.RunCommand();
             }
-            else if (replyValues[replyValues.Length-1] == 0)
+
+            if (commandQueue.ElementAt(commandIndex).getReplyName().Equals("general reply"))
             {
-                UserControlConsole.dc.ConsoleInput = "System replied with a failed " + commandQueue.ElementAt(commandIndex).getReplyName() + ". The command did not execute correctly.";
-                UserControlConsole.dc.RunCommand();
+                if (replyValues[replyValues.Length - 1] == 1)
+                {
+                    UserControlConsole.dc.ConsoleInput = "System replied with a successful " + commandQueue.ElementAt(commandIndex).getReplyName() + ". The command executed correctly.";
+                    UserControlConsole.dc.RunCommand();
+                }
+                else if (replyValues[replyValues.Length - 1] == 0)
+                {
+                    UserControlConsole.dc.ConsoleInput = "System replied with a failed " + commandQueue.ElementAt(commandIndex).getReplyName() + ". The command did not execute correctly.";
+                    UserControlConsole.dc.RunCommand();
+                }
             }
+            
 
             //this is where we'd properly parse the message
             //Command thisReply = commandQueue.ElementAt(commandIndex);

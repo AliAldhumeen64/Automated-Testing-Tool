@@ -70,6 +70,10 @@ namespace NavigationDrawerPopUpMenu2
         }
         public void setOffsetList(List<Offset> newOffsetList)
         {
+            while(offsetList.Count > 0)
+            {
+                offsetList.RemoveAt(0);
+            }
             offsetList = newOffsetList;
         }
         public void setReplyName(string newReplyName)

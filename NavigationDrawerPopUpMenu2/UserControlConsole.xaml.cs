@@ -79,15 +79,24 @@ namespace NavigationDrawerPopUpMenu2
             }
             set
             {
+
                 consoleOutput = value;
             }
         }
 
         public void RunCommand()
         {
-            ConsoleOutput.Add(ConsoleInput);
+            string tempValue = ConsoleInput;
+            while (tempValue.Length > 80)
+            {
+                ConsoleOutput.Add(tempValue.Substring(0,80));
+                tempValue = tempValue.Substring(80);
+            }
+            ConsoleOutput.Add(tempValue);
             // do your stuff here.
+
             //no
+
             ConsoleInput = String.Empty;
         }
 

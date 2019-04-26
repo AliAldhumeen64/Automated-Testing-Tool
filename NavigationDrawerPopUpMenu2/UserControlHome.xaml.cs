@@ -47,7 +47,10 @@ namespace NavigationDrawerPopUpMenu2
 
                 }
                 CommandList.ItemsSource = items;
-                
+                for(int j=0; j < UserControlCreate.commandQueue.Count; j++)
+                {
+                    ToProcess.Items.Add(UserControlCreate.commandQueue.ElementAt(j));
+                }
             }
         }
         //Object command to test
@@ -97,8 +100,8 @@ namespace NavigationDrawerPopUpMenu2
             Commands test = new Commands();
 
             Command actualCommand;
-
-            if(ToProcess.SelectedItem != null)
+            UserControlCreate.offsetIndex = 0;
+            if (ToProcess.SelectedItem != null)
             {
                 if (ToProcess.SelectedItem.GetType().Equals(test.GetType()))
                 {
@@ -115,7 +118,6 @@ namespace NavigationDrawerPopUpMenu2
                     {
                         offsetListView.Items.Add(tempOffsetList.ElementAt(j));
                     }
-                    UserControlCreate.offsetIndex = 0;
                 }
             }
             

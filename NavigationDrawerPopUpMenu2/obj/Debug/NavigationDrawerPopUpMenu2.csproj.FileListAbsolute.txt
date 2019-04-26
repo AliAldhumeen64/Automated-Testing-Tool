@@ -8,7 +8,6 @@ X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPop
 X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\bin\Debug\MaterialDesignThemes.Wpf.xml
 X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csprojResolveAssemblyReference.cache
 X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.g.cs
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsle.g.cs
 X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.g.cs
 X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.g.cs
 X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.g.cs
@@ -17,7 +16,6 @@ X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPop
 X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2_MarkupCompile.lref
 X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\App.baml
 X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\MainWindow.baml
-X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsle.baml
 X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlImport.baml
 X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlCreate.baml
 X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlHome.baml
@@ -58,3 +56,5 @@ C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Test
 C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\NavigationDrawerPopUpMenu2.csproj.CopyComplete
 C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsole.g.cs
 C:\Users\JT\Documents\webstorm_project_lol\seniordesignnorthropv2\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsole.baml
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsole.g.cs
+X:\ERIE\SENIOR DESIGN PROJECT STORAGE\Automated-Testing-Tool\NavigationDrawerPopUpMenu2\obj\Debug\UserControlConsole.baml
