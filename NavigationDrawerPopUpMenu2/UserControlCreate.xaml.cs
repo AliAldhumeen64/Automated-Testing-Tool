@@ -151,7 +151,6 @@ namespace NavigationDrawerPopUpMenu2
                         }
                         if (skip)
                         {
-                            commandIndex++;
                             continue;
                         }
                         bsc = new BaseMessage(next);
@@ -161,6 +160,7 @@ namespace NavigationDrawerPopUpMenu2
                         UserControlConsole.dc.ConsoleInput = ("Sent Message successfully.");
                         UserControlConsole.dc.RunCommand();
                         udp.BeginReceive(new AsyncCallback(DataReceived), new object());
+                        
                     }
 
                     exeProcess.WaitForExit();
@@ -195,12 +195,25 @@ namespace NavigationDrawerPopUpMenu2
             UserControlConsole.dc.ConsoleInput = "Reply description: " + commandQueue.ElementAt(commandIndex).getDescription();
             UserControlConsole.dc.RunCommand();
 
-            UserControlConsole.dc.ConsoleInput = "Returned Payload & header values: ";
+            UserControlConsole.dc.ConsoleInput = "Returned header values: ";
             UserControlConsole.dc.RunCommand();
 
             List<Offset> tempOffsets = commandQueue.ElementAt(commandIndex).getOffsetList();
 
-            for (int i=0; i < bytes.Length / 4; i++)
+            for (int i=0; i < 6; i++)
+            {
+                //This is where we would compare the returned values to the expected values in the read in document
+                replyValues[i] = BitConverter.ToUInt32(bytes, j);
+                Console.WriteLine(replyValues[i]);
+                UserControlConsole.dc.ConsoleInput = replyValues[i].ToString();
+                UserControlConsole.dc.RunCommand();
+                j += 4;
+            }
+
+            UserControlConsole.dc.ConsoleInput = "Returned payload values: ";
+            UserControlConsole.dc.RunCommand();
+
+            for (int i = 6; i < bytes.Length / 4; i++)
             {
                 //This is where we would compare the returned values to the expected values in the read in document
                 replyValues[i] = BitConverter.ToUInt32(bytes, j);
@@ -234,13 +247,15 @@ namespace NavigationDrawerPopUpMenu2
                     UserControlConsole.dc.RunCommand();
                 }
             }
-            
+
 
             //this is where we'd properly parse the message
             //Command thisReply = commandQueue.ElementAt(commandIndex);
             //BaseMessage thisMessage = new BaseMessage(bytes, thisReply);
 
 
+            //incrememnet the counter by 1
+            commandIndex++;
         }
 
     }

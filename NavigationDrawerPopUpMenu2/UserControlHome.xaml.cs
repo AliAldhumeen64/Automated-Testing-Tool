@@ -88,7 +88,7 @@ namespace NavigationDrawerPopUpMenu2
                     lastCommandEntered = selectedItem;
                     ToProcess.Items.Add(selectedItem);
                     UserControlCreate.commandQueue.Add(selectedItem.cmd);
-                    UserControlCreate.commandIndex++;
+                    //UserControlCreate.commandIndex++;
                     CommandList.UnselectAll();
                 }
             }
@@ -111,6 +111,15 @@ namespace NavigationDrawerPopUpMenu2
                     for(int i = offsetListView.Items.Count-1; i >= 0; i--)
                     {
                         offsetListView.Items.RemoveAt(i);
+                    }
+
+                    for(int k =0; k < ToProcess.Items.Count; k++)
+                    {
+                        if (selectedItemsTwo.Equals(ToProcess.Items.GetItemAt(k)))
+                        {
+                            UserControlCreate.commandIndex = k;
+                            break;
+                        }
                     }
 
                     List<Offset> tempOffsetList = selectedItemsTwo.cmd.getOffsetList();
