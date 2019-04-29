@@ -10,13 +10,15 @@ namespace NavigationDrawerPopUpMenu2
 {
     public class Command
     {
-        protected UInt32 payloadType;
-        protected string payloadName;
+        protected UInt32 payloadType; //holds the descriptor of what payload this is, goes into the header
+        protected string payloadName; 
         protected bool isCommand;
-        protected List<Offset> offsetList;
+        protected List<Offset> offsetList; //holds the list of offsets for this command
         protected string replyName;
-        protected UInt32 replyValue;
+        protected UInt32 replyValue; //holds the header value for the reply message to this command
         protected string description;
+
+        //getters, setters, and constructors are what you would expect
 
         public Command()
         {

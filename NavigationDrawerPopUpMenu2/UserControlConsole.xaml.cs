@@ -22,6 +22,10 @@ using System.Collections.ObjectModel;
 namespace NavigationDrawerPopUpMenu2
 {
 
+    //the console class is very barebones but it works by setting the consoleinput value to the string you want displayed
+    //then you call the runcommand method and it is sent to the console
+
+
     public partial class UserControlConsole : UserControl
     {
         public static ConsoleContent dc = new ConsoleContent();
@@ -58,7 +62,7 @@ namespace NavigationDrawerPopUpMenu2
         static string consoleInput = string.Empty;
         static List<string> consoleOutput = new List<string>() { "Starting console." };
 
-
+        //adds a string to the console
         public string ConsoleInput
         {
             get
@@ -84,6 +88,7 @@ namespace NavigationDrawerPopUpMenu2
             }
         }
 
+        //displays the string in the console
         public void RunCommand()
         {
             string tempValue = ConsoleInput;
@@ -93,10 +98,6 @@ namespace NavigationDrawerPopUpMenu2
                 tempValue = tempValue.Substring(80);
             }
             ConsoleOutput.Add(tempValue);
-            // do your stuff here.
-
-            //no
-
             ConsoleInput = String.Empty;
         }
 

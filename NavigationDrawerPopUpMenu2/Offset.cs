@@ -10,12 +10,20 @@ namespace NavigationDrawerPopUpMenu2
 {
     public class Offset
     {
-        public string offsetValue { get; set; }
+        //this holds what number offset is to be expected for the command
+        //the main functionality missing from the project right now is for offsets with a range of values, which only show up in replies
+        //in order to account for this, the offset value would need to be split using the string split command over a '-' character.
+        //this would give the values for the start and end offsets for a command.
+        public string offsetValue { get; set; } 
+
         public string mask { get; set; }
-        private string type;
+        private string type; 
         private string units;
         public string description { get; set; }
+
+        //this says how many inputs need to be read in for this command
         private int parameterCount;
+        //this is the message that is converted to a byte array when sending the message for this offset of this command
         private string message;
 
         public Offset()
@@ -87,8 +95,10 @@ namespace NavigationDrawerPopUpMenu2
         //This function sets the actual message for an offset
         //pretty much needed
         //the parameters are always Letters where the first one is 'A', then 'B', then 'C', etc.
-        //Use the int value this function to returns to know how many letters to worry about
-        //
+        //This function does 2 loops through the mask, one to find how many parameters there are as well as when they start and end
+        //and a second to properly set the message
+        //there could easily be bugs hiding here, should be working as intended though
+
         public void setMessage(string[] messageValues)
         {
             string newMessage = "";
@@ -102,6 +112,7 @@ namespace NavigationDrawerPopUpMenu2
             int charsleft;
 
             //getting rid of all the useless whitespace in the mask
+            //a bit of a mess
             string trueMask = mask.Trim(' ');
             trueMask = trueMask.Trim('\n');
             string[] truemaskarray = trueMask.Split(' ');
@@ -110,6 +121,7 @@ namespace NavigationDrawerPopUpMenu2
             {
                 trueMask += truemaskarray[n].Trim(' ');
             }
+
             //look through whole mask for parameters
             for (int i = 0; i < trueMask.Length; i++)
             {
@@ -145,7 +157,7 @@ namespace NavigationDrawerPopUpMenu2
             }
 
 
-            //search through now that we know exactly where the first and last index for each input it
+            //search through now that we know exactly where the first and last index for each input is
             for (int i = 0; i < trueMask.Length; i++)
             {
                 currentLetter = trueMask.ElementAt(i);
@@ -186,6 +198,7 @@ namespace NavigationDrawerPopUpMenu2
                         }
 
                         //if it is a new letter, add it to the list and increase the parameter count
+                        //this should never happen
                         if (isNewLetter)
                         {
                             string text = messageValues[parameterCount];

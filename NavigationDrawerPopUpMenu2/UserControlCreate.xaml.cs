@@ -22,14 +22,27 @@ namespace NavigationDrawerPopUpMenu2
     public partial class UserControlCreate : UserControl
     {
         private static UdpClient udp;
+
+        //we wanted to save the ips and ports if you made a connection and come back, and it does save them successfully
+        //the problem is you have to re-enter these values in order to create the connection
+        //we wanted these values to display in the input boxes but they didn't play nice
         private static string this_Ip ="";
         private static string system_Ip = "";
         private static string this_Port = "";
         private static string system_Port = "";
         private static List<BaseMessage> replies = new List<BaseMessage>();
+        //this "commandQueue" value is the queue of commands that gets sent to the black box over udp
+        //if you want to add something to the queue, you add it to this variable
+        //it is static so that you can access it on other xaml pages of this project
         public static List<Command> commandQueue = new List<Command>();
+
+        //these indexes are used to keep track of what command we're reading the input for, as well as what offset we're reading the input for
+        //these are reused based on the context, and could easily be the cause of bugs
         public static int commandIndex = -1;
         public static int offsetIndex = -1;
+
+        //the udpclient does not like being created twice, we're using a boolean value to prevent making a 2nd connection
+        //this could likely be changed
         private static bool hasConnection = false;
 
         public UserControlCreate()
@@ -110,6 +123,7 @@ namespace NavigationDrawerPopUpMenu2
                     IPEndPoint endPoint2 = new IPEndPoint(serverAddr, Int32.Parse(this_Port));
 
                     BaseMessage bsc;
+                    //only connect if there is not an existing connection
                     if (!hasConnection)
                     {
                         Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
@@ -132,6 +146,8 @@ namespace NavigationDrawerPopUpMenu2
 
 
                     commandIndex = 0;
+                    //this is where messages are sent to the black box system we are connected to
+                    //there could easily be bugs involved with the asynchronous function and the timing
                     for (int i=0; i < commandQueue.Count; i++)
                     {
                         bool skip = false;
@@ -165,6 +181,7 @@ namespace NavigationDrawerPopUpMenu2
 
                     exeProcess.WaitForExit();
 
+                    //empty the queue after everything was tested
                     while(commandQueue.Count > 0)
                     {
                         commandQueue.RemoveAt(0);
@@ -184,11 +201,14 @@ namespace NavigationDrawerPopUpMenu2
             Console.WriteLine("Waiting to receive...");
             IPAddress serverAddr = IPAddress.Parse(system_Ip);
             IPEndPoint ip = new IPEndPoint(serverAddr, Int32.Parse(system_Port));
+
+            //get the replies from the black box
             byte[] bytes = udp.EndReceive(ar, ref ip);
             UInt32[] replyValues = new uint[(bytes.Length/4)];
 
             int j = 0;
 
+            //these are used to log information about each of these commands to the user to give context to the values we output
             UserControlConsole.dc.ConsoleInput = "Reply name: " + commandQueue.ElementAt(commandIndex).getReplyName();
             UserControlConsole.dc.RunCommand();
 
@@ -200,11 +220,15 @@ namespace NavigationDrawerPopUpMenu2
 
             List<Offset> tempOffsets = commandQueue.ElementAt(commandIndex).getOffsetList();
 
+            //outputs the header of each message, used for debugging
             for (int i=0; i < 6; i++)
             {
-                //This is where we would compare the returned values to the expected values in the read in document
+                //This is where we WOULD compare the returned values to the expected values in the read in document
+                //due to time constraints we opted to log these outputs instead as you can still find discrepancies between sending something that shouldnt work and being told it worked
                 replyValues[i] = BitConverter.ToUInt32(bytes, j);
                 Console.WriteLine(replyValues[i]);
+                //these values being outputted are just uint32s, it may be more useful to compare these values to the ICD then output information describing we we read back
+                //due to time constraints we just logged the values
                 UserControlConsole.dc.ConsoleInput = replyValues[i].ToString();
                 UserControlConsole.dc.RunCommand();
                 j += 4;
@@ -215,9 +239,12 @@ namespace NavigationDrawerPopUpMenu2
 
             for (int i = 6; i < bytes.Length / 4; i++)
             {
-                //This is where we would compare the returned values to the expected values in the read in document
+                //This is where we WOULD compare the returned values to the expected values in the read in document
+                //due to time constraints we opted to log these outputs instead as you can still find discrepancies between sending something that shouldnt work and being told it worked
                 replyValues[i] = BitConverter.ToUInt32(bytes, j);
                 Console.WriteLine(replyValues[i]);
+                //these values being outputted are just uint32s, it may be more useful to compare these values to the ICD then output information describing we we read back
+                //due to time constraints we just logged the values
                 UserControlConsole.dc.ConsoleInput = replyValues[i].ToString();
                 UserControlConsole.dc.RunCommand();
                 j += 4;
@@ -226,6 +253,8 @@ namespace NavigationDrawerPopUpMenu2
             UserControlConsole.dc.ConsoleInput = "Descriptions for individual return values from the reply: ";
             UserControlConsole.dc.RunCommand();
 
+            //more information so the user can know what the values they get mean
+            //it would be more helpful to output these alongside each header value
             for (int k=0; k < tempOffsets.Count; k++)
             {
                 UserControlConsole.dc.ConsoleInput = "Offset #: " + tempOffsets.ElementAt(k).getOffsetValue();
@@ -234,6 +263,7 @@ namespace NavigationDrawerPopUpMenu2
                 UserControlConsole.dc.RunCommand();
             }
 
+            //as it was most common, we thought having a default message for general replies would be helpful
             if (commandQueue.ElementAt(commandIndex).getReplyName().Equals("general reply"))
             {
                 if (replyValues[replyValues.Length - 1] == 1)
@@ -247,11 +277,6 @@ namespace NavigationDrawerPopUpMenu2
                     UserControlConsole.dc.RunCommand();
                 }
             }
-
-
-            //this is where we'd properly parse the message
-            //Command thisReply = commandQueue.ElementAt(commandIndex);
-            //BaseMessage thisMessage = new BaseMessage(bytes, thisReply);
 
 
             //incrememnet the counter by 1

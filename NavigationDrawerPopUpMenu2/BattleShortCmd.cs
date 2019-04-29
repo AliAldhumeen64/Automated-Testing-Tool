@@ -6,35 +6,8 @@ using System.Threading.Tasks;
 
 namespace NavigationDrawerPopUpMenu2
 {
-    ////This is a super temporary class, was some garbage christian wrote, using it for reference
-    //public class BattleShortCmd
-    //{
-    //    private readonly byte[] m_Bytes = new byte[28];
-
-    //    public BattleShortCmd()
-    //    {
-    //        byte[] valAsBytes = BitConverter.GetBytes(0x12345678);
-    //        Array.Copy(valAsBytes, 0, m_Bytes, 0, sizeof(uint));
-    //    }
-
-    //    public uint SyncKey { get { return 0x12345678; } }
-
-    //    public uint MessageID
-    //    {
-    //        get { return 0x12345678; }
-    //        set
-    //        {
-    //            byte[] valAsBytes = BitConverter.GetBytes(value);
-    //            Array.Copy(valAsBytes, 0, m_Bytes, 4, sizeof(uint));
-    //        }
-    //    }
-
-    //    public byte[] getCMD()
-    //    {
-    //        return m_Bytes;
-    //    }
-    //}
-
+    //this class exists so that you can convert a command trying to be sent into a byte array that can be sent over the network
+    //converting from a command to a message works flawlessly, I would not expect there to be bugs for any of that functionality
     public class BaseMessage
     {
         protected const int WORD_SIZE_BYTES = 4;
@@ -55,6 +28,8 @@ namespace NavigationDrawerPopUpMenu2
             PayloadSize = Convert.ToUInt32(GetPayloadBytes(commandToSend).Length);
         }
 
+        //did not end up finishing this, but we wanted to use this class to do a backwards conversion of byte array to command w/ offsets
+        //this would have taken too much time that we already barely had, so we opted for a quicker solution in the usercontrolcreate.xaml.cs file instead
         public BaseMessage(byte[] replyBytes, Command replyName)
         {
             const uint HEADER_SIZE_WORDS = 6;
@@ -173,6 +148,7 @@ namespace NavigationDrawerPopUpMenu2
             }
         }
 
+        //this is the function that creates the byte array to be sent, most important function here
         public byte[] GetByteArray(Command commandToConvert)
         {
             var fullArray = new byte[m_Header.Length + PayloadSize];

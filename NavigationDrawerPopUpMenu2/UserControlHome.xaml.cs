@@ -54,6 +54,9 @@ namespace NavigationDrawerPopUpMenu2
             }
         }
         //Object command to test
+        //this class is literally only going to cause confusion and we regret its existence
+        //this class is what a command looks like to a user in the UI
+        //it holds what actual command it is referring to, as well as a name and description to show the user
         public class Commands
         {
             public Command cmd
@@ -74,6 +77,10 @@ namespace NavigationDrawerPopUpMenu2
             e.Handled = regex.IsMatch(e.Text);
         }
 
+        //this adds a command to the queue of commands (usercontrolcreate.commandqueue)
+
+        //BUG NOTE: if something is added to the queue, then you leave the tab and come back WITHOUT sending the queue to the black box,
+        //the selected commands are still in the queue despite not being displayed
         private void ListViewItem_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Commands test = new Commands();
@@ -95,6 +102,7 @@ namespace NavigationDrawerPopUpMenu2
           
         }
 
+        //this displays the offsets for the selected command
         private void ListViewItem_OffestList(object sender, MouseButtonEventArgs e)
         {
             Commands test = new Commands();
@@ -137,6 +145,9 @@ namespace NavigationDrawerPopUpMenu2
             return value.Split(',');
         }
 
+        //this function sends the inputs for the current offset of the selected command as a comma seperated list
+        //after clicking on the submit button, you would then input the values for the next offset
+        //if you try to input values past the # of offsets, they just get ignored
         private void OnClick(object sender, RoutedEventArgs e)
         {
             if(offsetsInput.Text != "")

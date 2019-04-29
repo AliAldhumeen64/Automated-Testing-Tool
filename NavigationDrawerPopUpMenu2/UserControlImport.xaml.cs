@@ -19,7 +19,12 @@ using Microsoft.Win32;
 
 namespace NavigationDrawerPopUpMenu2
 {
-    
+    //this class reads in EVERYTHING from the ICD when the tab is selected and a file is read
+    //this class reads in the header structure then reads in every command and each command's offsets
+    //the class knows where a command is located based on a table that says the command's name, type, value, and more
+    //it then looks for a following table with all the offsets in it
+    //these 2 tables should be all the input we read in.
+
     public partial class UserControlImport : UserControl
     {
         private bool hasDisplayedCommands = false;
